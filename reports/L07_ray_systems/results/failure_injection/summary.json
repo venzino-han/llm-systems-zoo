@@ -1,0 +1,61 @@
+{
+  "rows": [
+    {
+      "n_items": 200,
+      "n_outputs": 125,
+      "n_unique": 125,
+      "n_duplicates": 0,
+      "n_missing": 75,
+      "n_wrong_value": 0,
+      "n_failed_refs": 77,
+      "exactly_once": false,
+      "policy": "naive",
+      "wall_s": 0.576608918607235,
+      "n_crashes": 2,
+      "n_restarts": 0,
+      "recovery_s": [],
+      "driver_errors": {
+        "RayTaskError(RuntimeError)": 3,
+        "ActorDiedError": 74
+      }
+    },
+    {
+      "n_items": 200,
+      "n_outputs": 202,
+      "n_unique": 200,
+      "n_duplicates": 2,
+      "n_missing": 0,
+      "n_wrong_value": 0,
+      "n_failed_refs": 0,
+      "exactly_once": false,
+      "policy": "at_least_once",
+      "wall_s": 1.7984146615490317,
+      "n_crashes": 2,
+      "n_restarts": 2,
+      "recovery_s": [
+        0.2565743923187256,
+        0.2618238925933838
+      ],
+      "driver_errors": {}
+    },
+    {
+      "n_items": 200,
+      "n_outputs": 200,
+      "n_unique": 200,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_wrong_value": 0,
+      "n_failed_refs": 0,
+      "exactly_once": true,
+      "policy": "exactly_once",
+      "wall_s": 1.424644434824586,
+      "n_crashes": 2,
+      "n_restarts": 2,
+      "recovery_s": [
+        0.26105546951293945,
+        0.2748832702636719
+      ],
+      "driver_errors": {}
+    }
+  ]
+}

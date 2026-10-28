@@ -1,0 +1,12 @@
+# Chunked prefill off: a long prompt's prefill runs as one step and stalls every in-flight
+# decode (TPOT spikes under mixed workloads).
+label: no_chunked_prefill
+model: Qwen/Qwen2.5-0.5B-Instruct
+port: 8000
+gpu_memory_utilization: 0.30
+max_model_len: 4096
+max_num_seqs: 256
+max_num_batched_tokens: 8192
+enable_chunked_prefill: false
+enable_prefix_caching: true
+enforce_eager: false

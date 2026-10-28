@@ -1,0 +1,505 @@
+{
+  "label": "pilot, shared GPU",
+  "gpu": "NVIDIA RTX A6000",
+  "inference_model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "n_params": 494032768,
+    "kv_kib_per_token": 12.0
+  },
+  "train_model": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "n_params": 134515008
+  },
+  "inference": [
+    {
+      "phase_grid": {
+        "batch": 1,
+        "prompt_len": 256,
+        "decode_steps": 64
+      },
+      "weights_allocated_gib": 0.9278974533081055,
+      "prefill": {
+        "estimate_total_gib": 0.935823917388916,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.0029296875,
+          "prefill_activations": 0.012403488159179688,
+          "logits": 0.0002830028533935547,
+          "total": 0.935823917388916
+        },
+        "measured_peak_allocated_gib": 0.9513998031616211,
+        "measured_peak_reserved_gib": 0.99609375,
+        "process_used_nvidia_smi_gib": 1.310546875,
+        "wall_s": 0.17812995240092278,
+        "tokens_per_s": 1437.1530253587707
+      },
+      "decode": {
+        "estimate_total_gib": 0.936556339263916,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.003662109375,
+          "prefill_activations": 0.012403488159179688,
+          "logits": 0.0002830028533935547,
+          "total": 0.936556339263916
+        },
+        "measured_peak_allocated_gib": 0.9410414695739746,
+        "measured_peak_reserved_gib": 0.99609375,
+        "process_used_nvidia_smi_gib": 1.310546875,
+        "wall_s": 0.5259530358016491,
+        "ms_per_step": 8.218016184400767,
+        "tokens_per_s": 121.68386841317921,
+        "kv_tokens": 320,
+        "kv_measured_delta_gib": 0.012858867645263672,
+        "kv_estimate_gib": 0.003662109375
+      }
+    },
+    {
+      "phase_grid": {
+        "batch": 1,
+        "prompt_len": 1024,
+        "decode_steps": 64
+      },
+      "weights_allocated_gib": 0.9278974533081055,
+      "prefill": {
+        "estimate_total_gib": 0.9818234443664551,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.01171875,
+          "prefill_activations": 0.04961395263671875,
+          "logits": 0.0002830028533935547,
+          "total": 0.9818234443664551
+        },
+        "measured_peak_allocated_gib": 0.984431266784668,
+        "measured_peak_reserved_gib": 1.021484375,
+        "process_used_nvidia_smi_gib": 1.3359375,
+        "wall_s": 0.015740484930574894,
+        "tokens_per_s": 65055.174889240225
+      },
+      "decode": {
+        "estimate_total_gib": 0.9825558662414551,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.012451171875,
+          "prefill_activations": 0.04961395263671875,
+          "logits": 0.0002830028533935547,
+          "total": 0.9825558662414551
+        },
+        "measured_peak_allocated_gib": 0.949836254119873,
+        "measured_peak_reserved_gib": 1.025390625,
+        "process_used_nvidia_smi_gib": 1.33984375,
+        "wall_s": 0.4681813884526491,
+        "ms_per_step": 7.3153341945726424,
+        "tokens_per_s": 136.69915459801072,
+        "kv_tokens": 1088,
+        "kv_measured_delta_gib": 0.02165365219116211,
+        "kv_estimate_gib": 0.012451171875
+      }
+    },
+    {
+      "phase_grid": {
+        "batch": 4,
+        "prompt_len": 256,
+        "decode_steps": 64
+      },
+      "weights_allocated_gib": 0.9278974533081055,
+      "prefill": {
+        "estimate_total_gib": 0.9826724529266357,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.01171875,
+          "prefill_activations": 0.04961395263671875,
+          "logits": 0.0011320114135742188,
+          "total": 0.9826724529266357
+        },
+        "measured_peak_allocated_gib": 0.9842424392700195,
+        "measured_peak_reserved_gib": 1.021484375,
+        "process_used_nvidia_smi_gib": 1.3359375,
+        "wall_s": 0.014905575662851334,
+        "tokens_per_s": 68699.12462033123
+      },
+      "decode": {
+        "estimate_total_gib": 0.9856021404266357,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.0146484375,
+          "prefill_activations": 0.04961395263671875,
+          "logits": 0.0011320114135742188,
+          "total": 0.9856021404266357
+        },
+        "measured_peak_allocated_gib": 0.9547677040100098,
+        "measured_peak_reserved_gib": 1.02734375,
+        "process_used_nvidia_smi_gib": 1.341796875,
+        "wall_s": 0.4913724819198251,
+        "ms_per_step": 7.677695029997267,
+        "tokens_per_s": 520.9896960444161,
+        "kv_tokens": 1280,
+        "kv_measured_delta_gib": 0.025154590606689453,
+        "kv_estimate_gib": 0.0146484375
+      }
+    },
+    {
+      "phase_grid": {
+        "batch": 4,
+        "prompt_len": 1024,
+        "decode_steps": 64
+      },
+      "weights_allocated_gib": 0.9278974533081055,
+      "prefill": {
+        "estimate_total_gib": 1.166670560836792,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.046875,
+          "prefill_activations": 0.198455810546875,
+          "logits": 0.0011320114135742188,
+          "total": 1.166670560836792
+        },
+        "measured_peak_allocated_gib": 1.1226377487182617,
+        "measured_peak_reserved_gib": 1.19921875,
+        "process_used_nvidia_smi_gib": 1.513671875,
+        "wall_s": 0.0927169444039464,
+        "tokens_per_s": 44177.46967754535
+      },
+      "decode": {
+        "estimate_total_gib": 1.169600248336792,
+        "estimate_components_gib": {
+          "weights": 0.9202077388763428,
+          "kv_cache": 0.0498046875,
+          "prefill_activations": 0.198455810546875,
+          "logits": 0.0011320114135742188,
+          "total": 1.169600248336792
+        },
+        "measured_peak_allocated_gib": 0.9998660087585449,
+        "measured_peak_reserved_gib": 1.19921875,
+        "process_used_nvidia_smi_gib": 1.513671875,
+        "wall_s": 0.46368791814893484,
+        "ms_per_step": 7.245123721077107,
+        "tokens_per_s": 552.0954719328566,
+        "kv_tokens": 4352,
+        "kv_measured_delta_gib": 0.06424665451049805,
+        "kv_estimate_gib": 0.0498046875
+      }
+    }
+  ],
+  "training": [
+    {
+      "mode": "fp32",
+      "batch": 1,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.4005613327026367,
+      "estimate_total_gib_scores_materialised": 2.5323972702026367,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.3023815155029297,
+        "logits": 0.09375,
+        "total": 2.4005613327026367
+      },
+      "measured_peak_allocated_gib": 2.5940380096435547,
+      "measured_peak_reserved_gib": 2.8984375,
+      "process_used_nvidia_smi_gib": 3.22265625,
+      "step_wall_s": 0.05611518304795027,
+      "tokens_per_s": 4562.045173785653,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "fp32",
+      "batch": 2,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.7966928482055664,
+      "estimate_total_gib_scores_materialised": 3.0603647232055664,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.6047630310058594,
+        "logits": 0.1875,
+        "total": 2.7966928482055664
+      },
+      "measured_peak_allocated_gib": 2.688973903656006,
+      "measured_peak_reserved_gib": 3.048828125,
+      "process_used_nvidia_smi_gib": 3.373046875,
+      "step_wall_s": 0.09316900372505188,
+      "tokens_per_s": 5495.389877849796,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "fp32",
+      "batch": 1,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.7966928482055664,
+      "estimate_total_gib_scores_materialised": 3.3240365982055664,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.6047630310058594,
+        "logits": 0.1875,
+        "total": 2.7966928482055664
+      },
+      "measured_peak_allocated_gib": 2.822396755218506,
+      "measured_peak_reserved_gib": 3.248046875,
+      "process_used_nvidia_smi_gib": 3.572265625,
+      "step_wall_s": 0.07597367651760578,
+      "tokens_per_s": 6739.176297218571,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "fp32",
+      "batch": 2,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 3.588955879211426,
+      "estimate_total_gib_scores_materialised": 4.643643379211426,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 1.2095260620117188,
+        "logits": 0.375,
+        "total": 3.588955879211426
+      },
+      "measured_peak_allocated_gib": 4.020362377166748,
+      "measured_peak_reserved_gib": 4.248046875,
+      "process_used_nvidia_smi_gib": 4.572265625,
+      "step_wall_s": 0.11730045638978481,
+      "tokens_per_s": 8729.718805162089,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp",
+      "batch": 1,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.47661554813385,
+      "estimate_total_gib_scores_materialised": 2.54253351688385,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.1513195037841797,
+        "logits": 0.0703125,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.47661554813385
+      },
+      "measured_peak_allocated_gib": 2.573118209838867,
+      "measured_peak_reserved_gib": 2.8203125,
+      "process_used_nvidia_smi_gib": 3.14453125,
+      "step_wall_s": 0.05195242166519165,
+      "tokens_per_s": 4927.5855060192725,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp",
+      "batch": 2,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.69824755191803,
+      "estimate_total_gib_scores_materialised": 2.83008348941803,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.3026390075683594,
+        "logits": 0.140625,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.69824755191803
+      },
+      "measured_peak_allocated_gib": 2.575592041015625,
+      "measured_peak_reserved_gib": 2.95703125,
+      "process_used_nvidia_smi_gib": 3.28125,
+      "step_wall_s": 0.05079631507396698,
+      "tokens_per_s": 10079.471301303096,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp",
+      "batch": 1,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.69824755191803,
+      "estimate_total_gib_scores_materialised": 2.96191942691803,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.3026390075683594,
+        "logits": 0.140625,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.69824755191803
+      },
+      "measured_peak_allocated_gib": 2.5851593017578125,
+      "measured_peak_reserved_gib": 2.95703125,
+      "process_used_nvidia_smi_gib": 3.28125,
+      "step_wall_s": 0.051217556931078434,
+      "tokens_per_s": 9996.572087360188,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp",
+      "batch": 2,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 3.141511559486389,
+      "estimate_total_gib_scores_materialised": 3.668855309486389,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.6052780151367188,
+        "logits": 0.28125,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 3.141511559486389
+      },
+      "measured_peak_allocated_gib": 3.252774715423584,
+      "measured_peak_reserved_gib": 3.279296875,
+      "process_used_nvidia_smi_gib": 3.603515625,
+      "step_wall_s": 0.05889128241688013,
+      "tokens_per_s": 17387.972514357894,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 1,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.338579773902893,
+      "estimate_total_gib_scores_materialised": 2.340777039527893,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.013283729553222656,
+        "logits": 0.0703125,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.338579773902893
+      },
+      "measured_peak_allocated_gib": 2.575010299682617,
+      "measured_peak_reserved_gib": 2.62109375,
+      "process_used_nvidia_smi_gib": 2.9453125,
+      "step_wall_s": 0.08767387084662914,
+      "tokens_per_s": 2919.912141758055,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 2,
+      "seq_len": 256,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.4221760034561157,
+      "estimate_total_gib_scores_materialised": 2.4265705347061157,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.026567459106445312,
+        "logits": 0.140625,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.4221760034561157
+      },
+      "measured_peak_allocated_gib": 2.586090087890625,
+      "measured_peak_reserved_gib": 2.80078125,
+      "process_used_nvidia_smi_gib": 3.125,
+      "step_wall_s": 0.0899726040661335,
+      "tokens_per_s": 5690.62110977314,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 1,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.4221760034561157,
+      "estimate_total_gib_scores_materialised": 2.4309650659561157,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.026567459106445312,
+        "logits": 0.140625,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.4221760034561157
+      },
+      "measured_peak_allocated_gib": 2.5842132568359375,
+      "measured_peak_reserved_gib": 2.798828125,
+      "process_used_nvidia_smi_gib": 3.123046875,
+      "step_wall_s": 0.1074944194406271,
+      "tokens_per_s": 4763.037957359223,
+      "trainable_params": 134515008,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 2,
+      "seq_len": 512,
+      "lora_rank": null,
+      "param_dtype": "fp32",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.589368462562561,
+      "estimate_total_gib_scores_materialised": 2.606946587562561,
+      "estimate_components_gib": {
+        "weights": 0.5011074542999268,
+        "master_weights": 0.0,
+        "gradients": 0.5011074542999268,
+        "optimizer_states": 1.0022149085998535,
+        "activations": 0.053134918212890625,
+        "logits": 0.28125,
+        "autocast_weight_copies": 0.2505537271499634,
+        "total": 2.589368462562561
+      },
+      "measured_peak_allocated_gib": 2.6074256896972656,
+      "measured_peak_reserved_gib": 3.2109375,
+      "process_used_nvidia_smi_gib": 3.53515625,
+      "step_wall_s": 0.09044475387781858,
+      "tokens_per_s": 11321.828587021388,
+      "trainable_params": 134515008,
+      "status": "ok"
+    }
+  ]
+}

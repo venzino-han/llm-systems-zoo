@@ -1,0 +1,86 @@
+{
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "torch": "2.11.0+cu130",
+  "rows": [
+    {
+      "part": "hf",
+      "mode": "eager",
+      "batch": 1,
+      "prompt_tokens": 64,
+      "new_tokens": 128,
+      "first_call_s": 1.505300342105329,
+      "second_call_s": 1.0966339642181993,
+      "steady_s": 1.0866226525977254,
+      "steady_ms_per_step": 8.48923947341973,
+      "steady_output_tokens_per_s": 117.79618222940398,
+      "unique_graphs_before": 0,
+      "unique_graphs_after_first": 0,
+      "recompiles_on_second_call": 0,
+      "graph_breaks": 0,
+      "peak_mem_gib": 0.9434041976928711,
+      "recompile_reasons": []
+    },
+    {
+      "part": "hf",
+      "mode": "eager",
+      "batch": 8,
+      "prompt_tokens": 64,
+      "new_tokens": 128,
+      "first_call_s": 1.3228561263531446,
+      "second_call_s": 1.2824150612577796,
+      "steady_s": 1.2572335582226515,
+      "steady_ms_per_step": 9.822137173614465,
+      "steady_output_tokens_per_s": 814.4866904822575,
+      "unique_graphs_before": 0,
+      "unique_graphs_after_first": 0,
+      "recompiles_on_second_call": 0,
+      "graph_breaks": 0,
+      "peak_mem_gib": 0.9808111190795898,
+      "recompile_reasons": []
+    },
+    {
+      "part": "hf",
+      "mode": "default",
+      "batch": 1,
+      "prompt_tokens": 64,
+      "new_tokens": 128,
+      "first_call_s": 5.117510417476296,
+      "second_call_s": 3.7152577256783843,
+      "steady_s": 0.4944794671609998,
+      "steady_ms_per_step": 3.8631208371953107,
+      "steady_output_tokens_per_s": 258.8580689404519,
+      "unique_graphs_before": 0,
+      "unique_graphs_after_first": 2,
+      "recompiles_on_second_call": 1,
+      "graph_breaks": 0,
+      "peak_mem_gib": 0.9808111190795898,
+      "recompile_reasons": [
+        "Recompiling function wrapper in /home/kirc/.local/lib/python3.10/site-packages/transformers/utils/generic.py:894\n    triggered by the following guard failure(s):\n    - 0/0: tensor 'kwargs['input_ids']' size mismatch at index 1. expected 64, actual 1",
+        "Recompiling function wrapper in /home/kirc/.local/lib/python3.10/site-packages/transformers/utils/generic.py:894\n    triggered by the following guard failure(s):\n    - 0/1: tensor 'kwargs['input_ids']' size mismatch at index 1. expected 1, actual 64\n    - 0/0: kwargs['past_key_values'].layers[0].is_"
+      ]
+    },
+    {
+      "part": "hf",
+      "mode": "default",
+      "batch": 8,
+      "prompt_tokens": 64,
+      "new_tokens": 128,
+      "first_call_s": 8.909094917587936,
+      "second_call_s": 5.573194148018956,
+      "steady_s": 0.5186293981969357,
+      "steady_ms_per_step": 4.05179217341356,
+      "steady_output_tokens_per_s": 1974.4349309160514,
+      "unique_graphs_before": 3,
+      "unique_graphs_after_first": 5,
+      "recompiles_on_second_call": 1,
+      "graph_breaks": 0,
+      "peak_mem_gib": 0.9810061454772949,
+      "recompile_reasons": [
+        "Recompiling function wrapper in /home/kirc/.local/lib/python3.10/site-packages/transformers/utils/generic.py:894\n    triggered by the following guard failure(s):\n    - 0/1: tensor 'kwargs['input_ids']' size mismatch at index 0. expected 1, actual 8\n    - 0/2: tensor 'kwargs['input_ids']' size mismat",
+        "Recompiling function wrapper in /home/kirc/.local/lib/python3.10/site-packages/transformers/utils/generic.py:894\n    triggered by the following guard failure(s):\n    - 0/3: kwargs['past_key_values'].layers[0].is_initialized == False  # if not self.is_initialized:  # transformers/cache_utils.py:322 i",
+        "Recompiling function wrapper in /home/kirc/.local/lib/python3.10/site-packages/transformers/utils/generic.py:894\n    triggered by the following guard failure(s):\n    - 0/4: tensor 'kwargs['input_ids']' size mismatch at index 1. expected 1, actual 64\n    - 0/3: kwargs['past_key_values'].layers[0].is_"
+      ]
+    }
+  ],
+  "label": "pilot, shared GPU"
+}

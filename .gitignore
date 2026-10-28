@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.ruff_cache/
+.pytest_cache/
+
+# Experiment outputs: raw runs stay local; curated summaries live under reports/<lab>/results
+runs/
+!runs/.gitkeep
+*.pt
+*.safetensors
+*.bin
+*.ckpt
+checkpoints/
+wandb/
+*.nsys-rep
+*.sqlite
+*.trace.json.gz
+
+# Data and model caches
+data/
+.cache/
+hf_cache/
+faiss_index/
+*.faiss
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets
+.env

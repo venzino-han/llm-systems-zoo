@@ -1,0 +1,17 @@
+# L08a quantization pilot (Qwen2.5-0.5B-Instruct). Each mode runs in its own subprocess.
+model: Qwen/Qwen2.5-0.5B-Instruct
+hf_modes: [bf16, fp16, int8_bnb, nf4_bnb, awq, gptq]        # awq/gptq need autoawq / gptqmodel kernels
+vllm_modes: [bf16, awq, gptq, gptq_int8, fp8, nf4_bnb]
+perplexity:
+  dataset: wikitext/wikitext-2-raw-v1/test
+  window: 1024
+  stride: 1024          # non-overlapping; < window gives sliding-window ppl
+  max_tokens: 65536
+decode:
+  prompts: HuggingFaceH4/ultrachat_200k test_sft, first user turn, chat template
+  batch_sizes: [1, 8]
+  max_new_tokens: 128
+  decoding: greedy, min_tokens == max_tokens
+vllm:
+  kv_cache_memory_bytes: 2147483648   # fixed 2 GiB KV budget (skips free-memory profiling on shared GPUs)
+  max_model_len: 2048

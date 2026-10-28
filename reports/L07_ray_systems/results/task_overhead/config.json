@@ -1,0 +1,16 @@
+{
+  "workers": 8,
+  "granularities": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "budget_s": 4.0,
+  "max_units": 4000,
+  "chunk": 64,
+  "repeats": 2,
+  "smoke": false
+}

@@ -1,0 +1,112 @@
+{
+  "points": [
+    {
+      "run_dir": "runs/L03_serving_slo/20261029_021318_short_qa_overload_no_admission_8fef659ae834",
+      "label": "no_admission",
+      "rate": 140.0,
+      "max_in_flight": null
+    },
+    {
+      "run_dir": "runs/L03_serving_slo/20261029_021359_short_qa_overload_max_in_flight_64_dfe602addc98",
+      "label": "max_in_flight_64",
+      "rate": 140.0,
+      "max_in_flight": 64
+    },
+    {
+      "run_dir": "runs/L03_serving_slo/20261029_021422_short_qa_overload_max_in_flight_128_84a35eb8c4dd",
+      "label": "max_in_flight_128",
+      "rate": 140.0,
+      "max_in_flight": 128
+    }
+  ],
+  "rows": [
+    {
+      "run": "20261029_021422_short_qa_overload_max_in_flight_128_84a35eb8c4dd",
+      "mode": "open",
+      "offered_load": 140.0,
+      "label": "max_in_flight_128",
+      "n_submitted": 1680,
+      "n_success": 554,
+      "error_rate": 0.6702380952380952,
+      "requests_per_s": 35.295368761390904,
+      "output_tokens_per_s": 4715.945462916386,
+      "input_tokens_per_s": 4750.094050743291,
+      "ttft_mean": 0.2207570677280211,
+      "ttft_p50": 0.20129058370366693,
+      "ttft_p95": 0.439134242804721,
+      "ttft_p99": 0.5823949510138482,
+      "tpot_mean": 0.020922822907705193,
+      "tpot_p50": 0.020888334218208814,
+      "tpot_p95": 0.024907345384567812,
+      "tpot_p99": 0.026041210033792766,
+      "e2e_p50": 2.8689614799804986,
+      "e2e_p99": 5.632510923184463,
+      "p99_undersampled": false,
+      "max_in_flight": 128,
+      "rejected": 1126,
+      "goodput_rps": 34.594558190316356,
+      "slo_attainment": 0.32321428571428573
+    },
+    {
+      "run": "20261029_021359_short_qa_overload_max_in_flight_64_dfe602addc98",
+      "mode": "open",
+      "offered_load": 140.0,
+      "label": "max_in_flight_64",
+      "n_submitted": 1680,
+      "n_success": 427,
+      "error_rate": 0.7458333333333333,
+      "requests_per_s": 28.535738930003536,
+      "output_tokens_per_s": 3666.073925578768,
+      "input_tokens_per_s": 3971.7471571146843,
+      "ttft_mean": 0.05808569117071897,
+      "ttft_p50": 0.05500576552003622,
+      "ttft_p95": 0.07687536664307117,
+      "ttft_p99": 0.11724552379921091,
+      "tpot_mean": 0.014835513831777144,
+      "tpot_p50": 0.01477793806232512,
+      "tpot_p95": 0.016064924932246948,
+      "tpot_p99": 0.016344431364821332,
+      "e2e_p50": 1.8878428423777223,
+      "e2e_p99": 3.362779233083129,
+      "p99_undersampled": false,
+      "max_in_flight": 64,
+      "rejected": 1253,
+      "goodput_rps": 28.535738930003536,
+      "slo_attainment": 0.25416666666666665
+    },
+    {
+      "run": "20261029_021318_short_qa_overload_no_admission_8fef659ae834",
+      "mode": "open",
+      "offered_load": 140.0,
+      "label": "no_admission",
+      "n_submitted": 1680,
+      "n_success": 1680,
+      "error_rate": 0.0,
+      "requests_per_s": 45.3256307432119,
+      "output_tokens_per_s": 6022.96693950959,
+      "input_tokens_per_s": 6112.808814732743,
+      "ttft_mean": 8.213953715609941,
+      "ttft_p50": 7.685521525796503,
+      "ttft_p95": 18.374501890316605,
+      "ttft_p99": 19.259923510793598,
+      "tpot_mean": 0.03760479231041695,
+      "tpot_p50": 0.0392958208003467,
+      "tpot_p95": 0.042314579603391675,
+      "tpot_p99": 0.04383565340899599,
+      "e2e_p50": 13.231718368362635,
+      "e2e_p99": 24.309827259117743,
+      "p99_undersampled": false,
+      "max_in_flight": 1167,
+      "rejected": 0,
+      "goodput_rps": 7.608230874753426,
+      "slo_attainment": 0.16785714285714284
+    }
+  ],
+  "notes": [
+    "workload: benchmarks/workloads/short_qa.yaml",
+    "backend: external (pilot_baseline)",
+    "SLO: ttft=0.5,tpot=0.05",
+    "tag: pilot, shared GPU, 0.10 util, A6000, enforce-eager, max_model_len 2048"
+  ],
+  "elapsed_s": 92.54423123039305
+}

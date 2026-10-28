@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "mode": "task_per_call",
+      "n_inputs": 64,
+      "wall_s": 30.620112008415163,
+      "inputs_per_s": 2.090129519526618,
+      "time_to_first_result_s": 4.470091367140412,
+      "model_load_s_mean": 1.7668225155648543,
+      "model_loads": 64,
+      "peak_gpu_mib_max": null
+    },
+    {
+      "mode": "actor_pool",
+      "n_inputs": 64,
+      "wall_s": 9.654609413817525,
+      "inputs_per_s": 6.628957967828735,
+      "time_to_first_result_s": 4.651274944655597,
+      "model_load_s_mean": 3.4926195279695094,
+      "model_loads": 2,
+      "peak_gpu_mib_max": null
+    },
+    {
+      "mode": "actor_batched",
+      "n_inputs": 64,
+      "wall_s": 6.846321781165898,
+      "inputs_per_s": 9.348085299768234,
+      "time_to_first_result_s": 5.30992576200515,
+      "model_load_s_mean": 3.7483559078536928,
+      "model_loads": 2,
+      "peak_gpu_mib_max": null
+    }
+  ],
+  "device": "cpu"
+}

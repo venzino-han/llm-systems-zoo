@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "batch_size": 1,
+      "concurrency": 1,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 28.374354146420956,
+      "rows_per_s": 2.255557947495088
+    },
+    {
+      "batch_size": 8,
+      "concurrency": 1,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 11.723175805993378,
+      "rows_per_s": 5.4592715369226585
+    },
+    {
+      "batch_size": 32,
+      "concurrency": 1,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 8.80573979113251,
+      "rows_per_s": 7.267986735702638
+    },
+    {
+      "batch_size": 1,
+      "concurrency": 2,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 29.162814313545823,
+      "rows_per_s": 2.1945755753165654
+    },
+    {
+      "batch_size": 8,
+      "concurrency": 2,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 9.798829479143023,
+      "rows_per_s": 6.531392360304371
+    },
+    {
+      "batch_size": 32,
+      "concurrency": 2,
+      "slow_preprocess_ms": 0,
+      "n_rows": 64,
+      "wall_s": 9.71482982672751,
+      "rows_per_s": 6.587866297351163
+    },
+    {
+      "batch_size": 1,
+      "concurrency": 1,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 69.44109191838652,
+      "rows_per_s": 0.9216444936554081
+    },
+    {
+      "batch_size": 8,
+      "concurrency": 1,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 36.85838754102588,
+      "rows_per_s": 1.7363754702715541
+    },
+    {
+      "batch_size": 32,
+      "concurrency": 1,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 15.374855171889067,
+      "rows_per_s": 4.162640836904644
+    },
+    {
+      "batch_size": 1,
+      "concurrency": 2,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 35.11456473823637,
+      "rows_per_s": 1.822605533546887
+    },
+    {
+      "batch_size": 8,
+      "concurrency": 2,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 12.722789640538394,
+      "rows_per_s": 5.03034332942816
+    },
+    {
+      "batch_size": 32,
+      "concurrency": 2,
+      "slow_preprocess_ms": 50,
+      "n_rows": 64,
+      "wall_s": 12.713701635599136,
+      "rows_per_s": 5.033939118155495
+    }
+  ],
+  "device": "cpu"
+}

@@ -1,0 +1,87 @@
+{
+  "label": "pilot, shared GPU",
+  "rows": [
+    {
+      "prefix_caching": false,
+      "prefix_tokens": 512,
+      "n_prompts": 8,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 4441,
+      "prefill_only": {
+        "cold_s": 0.10202499385923147,
+        "warm_same_s": 0.050644935108721256,
+        "warm_new_suffix_s": 0.05160891730338335,
+        "cold_prompt_tokens_per_s": 43528.54954470715,
+        "warm_new_prompt_tokens_per_s": 86051.02048340897,
+        "speedup_warm_new_vs_cold": 1.9768869255573973,
+        "cached_tokens": {
+          "cold": 0,
+          "warm_same": 0,
+          "warm_new": 0
+        },
+        "cached_fraction_warm_new": 0.0
+      },
+      "generation_warm": {
+        "wall_s": 0.16119315847754478,
+        "output_tokens": 128,
+        "output_tokens_per_s": 794.0783666561829,
+        "cached_tokens": 0
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": true,
+      "prefix_tokens": 512,
+      "n_prompts": 8,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 4441,
+      "prefill_only": {
+        "cold_s": 0.03989212308079004,
+        "warm_same_s": 0.04728358518332243,
+        "warm_new_suffix_s": 0.021110747940838337,
+        "cold_prompt_tokens_per_s": 111325.23558613387,
+        "warm_new_prompt_tokens_per_s": 210366.7767928284,
+        "speedup_warm_new_vs_cold": 1.889659390211348,
+        "cached_tokens": {
+          "cold": 3584,
+          "warm_same": 4400,
+          "warm_new": 4096
+        },
+        "cached_fraction_warm_new": 0.9223147939653231
+      },
+      "generation_warm": {
+        "wall_s": 0.13176347594708204,
+        "output_tokens": 128,
+        "output_tokens_per_s": 971.4376391482455,
+        "cached_tokens": 4384
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 17720.0,
+          "vllm:prefix_cache_hits": 16464.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "backend_status": {
+    "naive_fp32": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 1.04 GiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in use",
+    "sdpa_math": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 676.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in u",
+    "sdpa_efficient": "ok",
+    "sdpa_flash": "ok",
+    "sdpa_cudnn": "ok",
+    "flashinfer_prefill": "ok",
+    "flash_attn_3": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+  },
+  "rows": [
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.06036319732666016,
+      "peak_extra_mib": 5.3125,
+      "tflops": 1.1117513149085716,
+      "max_abs_err_vs_math": 0.0009765625
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.13089920282363893,
+      "peak_extra_mib": 7.00244140625,
+      "tflops": 0.5126758800083456,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.01228640004992485,
+      "peak_extra_mib": 0.5,
+      "tflops": 5.462044514854493,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.008190400153398513,
+      "peak_extra_mib": 0.5087890625,
+      "tflops": 8.193600159102598,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.01228479966521263,
+      "peak_extra_mib": 0.5009765625,
+      "tflops": 5.462756074894319,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.03737919926643372,
+      "peak_extra_mib": 33.25,
+      "tflops": 1.7953531728076189,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.07174879908561707,
+      "peak_extra_mib": 18.75,
+      "tflops": 3.7413233311358822,
+      "max_abs_err_vs_math": 0.001953125
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.09218400120735168,
+      "peak_extra_mib": 23.50439453125,
+      "tflops": 2.9119527519336215,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.020579199492931365,
+      "peak_extra_mib": 1.0,
+      "tflops": 13.044018359033034,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.010251200199127198,
+      "peak_extra_mib": 3.0478515625,
+      "tflops": 26.185758817085144,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.02051839977502823,
+      "peak_extra_mib": 1.0009765625,
+      "tflops": 13.082670137205215,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.04380480051040649,
+      "peak_extra_mib": 34.5,
+      "tflops": 6.1279917468458525,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 512,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.2445375919342041,
+      "peak_extra_mib": 70.0,
+      "tflops": 4.390906999235127,
+      "max_abs_err_vs_math": 0.0009765625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.2769167900085449,
+      "peak_extra_mib": 85.00830078125,
+      "tflops": 3.8774890607639474,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.039027199149131775,
+      "peak_extra_mib": 2.0,
+      "tflops": 27.51265392878923,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.016385599970817566,
+      "peak_extra_mib": 6.0947265625,
+      "tflops": 65.52960074164591,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.03892320096492767,
+      "peak_extra_mib": 2.0009765625,
+      "tflops": 27.58616448239987,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.026654401421546937,
+      "peak_extra_mib": 37.0,
+      "tflops": 40.283846822086446,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 1.5636176109313964,
+      "peak_extra_mib": 270.0,
+      "tflops": 2.746814352801787,
+      "max_abs_err_vs_math": 0.0009765625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 1.6827184677124023,
+      "peak_extra_mib": 322.01611328125,
+      "tflops": 2.5523980264142816,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.08542720079421998,
+      "peak_extra_mib": 4.0,
+      "tflops": 50.276343554155154,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.033723199367523195,
+      "peak_extra_mib": 20.3134765625,
+      "tflops": 127.35942545641821,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.03685440123081207,
+      "peak_extra_mib": 4.0009765625,
+      "tflops": 116.53878919647725,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.05119360089302063,
+      "peak_extra_mib": 42.0,
+      "tflops": 83.89656560739304,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 2048,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 6.6169677734375,
+      "peak_extra_mib": 1060.0,
+      "tflops": 2.596335628679524
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 94.96 GiB of which 112.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in"
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.33615520000457766,
+      "peak_extra_mib": 8.0,
+      "tflops": 51.106956500348794
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.21734719276428222,
+      "peak_extra_mib": 8.1259765625,
+      "tflops": 79.04343720984674
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.09015200138092042,
+      "peak_extra_mib": 8.0009765625,
+      "tflops": 190.5655883490559
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.1855247974395752,
+      "peak_extra_mib": 52.0,
+      "tflops": 92.60147118390158
+    },
+    {
+      "seq": 4096,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 1.11 GiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in use"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 788.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in u"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 1.0126720428466798,
+      "peak_extra_mib": 16.0,
+      "tflops": 67.85955751560552
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.4291823863983154,
+      "peak_extra_mib": 16.2509765625,
+      "tflops": 160.1171877361781
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.47002081871032714,
+      "peak_extra_mib": 16.0009765625,
+      "tflops": 146.20517645273
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.547492790222168,
+      "peak_extra_mib": 72.0,
+      "tflops": 125.51667887373314
+    },
+    {
+      "seq": 8192,
+      "head_dim": 64,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.051260799169540405,
+      "peak_extra_mib": 6.5625,
+      "tflops": 2.6183307746741744,
+      "max_abs_err_vs_math": 0.001953125
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.12830079793930055,
+      "peak_extra_mib": 9.25244140625,
+      "tflops": 1.0461176403867634,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.014375999569892883,
+      "peak_extra_mib": 1.0,
+      "tflops": 9.33623622812894,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.010345599800348281,
+      "peak_extra_mib": 3.0244140625,
+      "tflops": 12.973411942290829,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.012296000123023986,
+      "peak_extra_mib": 1.0009765625,
+      "tflops": 10.91556007296066,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.04185119867324829,
+      "peak_extra_mib": 34.5,
+      "tflops": 3.207022313695242,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 256,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.07789120078086853,
+      "peak_extra_mib": 21.25,
+      "tflops": 6.892574599156328,
+      "max_abs_err_vs_math": 0.0009765625
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.09829760193824769,
+      "peak_extra_mib": 28.00439453125,
+      "tflops": 5.461688804344097,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.024604800343513488,
+      "peak_extra_mib": 2.0,
+      "tflops": 21.81976299358731,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.012296000123023986,
+      "peak_extra_mib": 10.0791015625,
+      "tflops": 43.66224029184264,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.020521600544452668,
+      "peak_extra_mib": 2.0009765625,
+      "tflops": 26.161259246668514,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.04575360119342804,
+      "peak_extra_mib": 37.0,
+      "tflops": 11.73395968833848,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 512,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 0.24468801021575928,
+      "peak_extra_mib": 75.0,
+      "tflops": 8.776415510128212,
+      "max_abs_err_vs_math": 0.0009765625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 0.30207200050354005,
+      "peak_extra_mib": 94.00830078125,
+      "tflops": 7.109178091382995,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.045388799905776975,
+      "peak_extra_mib": 4.0,
+      "tflops": 47.313073984286454,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.028696000576019287,
+      "peak_extra_mib": 36.2822265625,
+      "tflops": 74.83564276879099,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.03483999967575073,
+      "peak_extra_mib": 4.0009765625,
+      "tflops": 61.63845200878941,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.036852800846099855,
+      "peak_extra_mib": 42.0,
+      "tflops": 58.27192502865814,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 1024,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "ms": 1.7611024856567383,
+      "peak_extra_mib": 280.0,
+      "tflops": 4.877589272606528,
+      "max_abs_err_vs_math": 0.001953125
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "ms": 1.9209951400756835,
+      "peak_extra_mib": 340.01611328125,
+      "tflops": 4.471606623461615,
+      "max_abs_err_vs_math": 0.0
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.15629279613494873,
+      "peak_extra_mib": 8.0,
+      "tflops": 54.96052796050271,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.05738239884376526,
+      "peak_extra_mib": 40.3134765625,
+      "tflops": 149.6963313678776,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.06144800186157227,
+      "peak_extra_mib": 8.0009765625,
+      "tflops": 139.7919270239426,
+      "max_abs_err_vs_math": 0.015625
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.08549759984016418,
+      "peak_extra_mib": 52.0,
+      "tflops": 100.46989164676772,
+      "max_abs_err_vs_math": 0.0078125
+    },
+    {
+      "seq": 2048,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 94.96 GiB of which 128.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in"
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 94.96 GiB of which 128.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in"
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 0.5505040168762207,
+      "peak_extra_mib": 16.0,
+      "tflops": 62.41505477647712
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.2776992082595825,
+      "peak_extra_mib": 16.1259765625,
+      "tflops": 123.73005520376509
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.22208480834960936,
+      "peak_extra_mib": 16.0009765625,
+      "tflops": 154.7144922849039
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.38807199001312254,
+      "peak_extra_mib": 72.0,
+      "tflops": 88.5395989719282
+    },
+    {
+      "seq": 4096,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "naive_fp32",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 1.04 GiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in use"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_math",
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 94.96 GiB of which 676.69 MiB is free. Process 896451 has 89.85 GiB memory in use. Process 927135 has 3.11 GiB memory in u"
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_efficient",
+      "ms": 1.90423526763916,
+      "peak_extra_mib": 32.0,
+      "tflops": 72.17540595306512
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_flash",
+      "ms": 0.8035183906555176,
+      "peak_extra_mib": 32.2509765625,
+      "tflops": 171.04643163160964
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "sdpa_cudnn",
+      "ms": 0.7276351928710938,
+      "peak_extra_mib": 32.0009765625,
+      "tflops": 188.88442287912864
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flashinfer_prefill",
+      "ms": 0.9884896278381348,
+      "peak_extra_mib": 112.0,
+      "tflops": 139.03934811393452
+    },
+    {
+      "seq": 8192,
+      "head_dim": 128,
+      "heads": 8,
+      "batch": 1,
+      "candidate": "flash_attn_3",
+      "error": "RuntimeError: flash-attn-3 Hopper build cannot run on sm_120 (no kernel image)"
+    }
+  ]
+}

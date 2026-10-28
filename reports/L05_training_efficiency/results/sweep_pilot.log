@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 3732.27it/s]
+            fp32       3048 tok/s  peak_alloc 10.28 GiB  reserved 15.63 GiB  step   273.6 ms  loss 1.380
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  85%|████████▍ | 246/290 [00:00<00:00, 2459.86it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 2621.33it/s]
+   bf16_autocast       5503 tok/s  peak_alloc 10.13 GiB  reserved 15.63 GiB  step   151.5 ms  loss 1.478
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 13756.02it/s]
+    bf16_weights       8265 tok/s  peak_alloc  6.21 GiB  reserved 12.04 GiB  step   100.9 ms  loss 1.250
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  84%|████████▍ | 244/290 [00:00<00:00, 2439.71it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 2609.38it/s]
+       bf16+ckpt       4779 tok/s  peak_alloc  9.25 GiB  reserved 15.72 GiB  step   174.5 ms  loss 1.478
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 3124.18it/s]
+     bf16+accum4       3497 tok/s  peak_alloc  9.26 GiB  reserved 10.45 GiB  step   238.5 ms  loss 1.466
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  84%|████████▍ | 243/290 [00:00<00:00, 2418.52it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 2603.28it/s]
+    bf16+packing       8323 tok/s  peak_alloc 13.26 GiB  reserved 14.58 GiB  step   220.4 ms  loss 1.237
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  83%|████████▎ | 240/290 [00:00<00:00, 2376.85it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 2567.72it/s]
+     bf16+lora16       8563 tok/s  peak_alloc  6.40 GiB  reserved 12.24 GiB  step    97.4 ms  loss 0.870
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]/home/kirc/.local/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:212: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:  42%|████▏     | 123/290 [00:00<00:00, 1223.63it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1625.69it/s]
+         qlora16       6648 tok/s  peak_alloc  5.21 GiB  reserved 10.97 GiB  step   125.4 ms  loss 0.911
+SWEEP EXIT 0

@@ -1,0 +1,35 @@
+name: long_prefix_shared
+seed: 0
+classes:
+- name: shared_prefix
+  weight: 1.0
+  prompt_len:
+    kind: uniform
+    value: 128
+    low: 32
+    high: 128
+    mu: 5.0
+    sigma: 0.5
+  output_len:
+    kind: fixed
+    value: 64
+    low: 1
+    high: 4096
+    mu: 5.0
+    sigma: 0.5
+  shared_prefix_tokens: 1024
+  prompt_source: synthetic
+  dataset: null
+  dataset_split: null
+arrival:
+  mode: open
+  concurrency: 8
+  rate: 4.0
+  duration_s: 60
+  on_s: 5.0
+  off_s: 5.0
+  on_rate: 16.0
+  off_rate: 1.0
+num_requests: 200
+description: A 1024-token shared system prompt + short user turn. Prefill-dominated
+  unless prefix caching is on.

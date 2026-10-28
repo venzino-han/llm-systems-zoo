@@ -1,0 +1,55 @@
+name: mixed_burst
+seed: 0
+classes:
+- name: short
+  weight: 0.8
+  prompt_len:
+    kind: lognormal
+    value: 128
+    low: 16
+    high: 256
+    mu: 4.564348191467836
+    sigma: 0.4
+  output_len:
+    kind: lognormal
+    value: 128
+    low: 16
+    high: 192
+    mu: 4.564348191467836
+    sigma: 0.3
+  shared_prefix_tokens: 0
+  prompt_source: synthetic
+  dataset: null
+  dataset_split: null
+- name: long
+  weight: 0.2
+  prompt_len:
+    kind: uniform
+    value: 128
+    low: 1500
+    high: 3000
+    mu: 5.0
+    sigma: 0.5
+  output_len:
+    kind: fixed
+    value: 256
+    low: 1
+    high: 4096
+    mu: 5.0
+    sigma: 0.5
+  shared_prefix_tokens: 0
+  prompt_source: synthetic
+  dataset: null
+  dataset_split: null
+arrival:
+  mode: burst
+  concurrency: 8
+  rate: 4.0
+  duration_s: 30.0
+  on_s: 5
+  off_s: 10
+  on_rate: 12.0
+  off_rate: 1.0
+num_requests: 200
+description: 80% short chat + 20% long-document requests under a bursty arrival process.
+  Shows head-of-line blocking.

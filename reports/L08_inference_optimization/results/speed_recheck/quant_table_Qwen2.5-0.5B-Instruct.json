@@ -1,0 +1,81 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "rows": [
+    {
+      "engine": "vllm",
+      "mode": "bf16",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.93,
+      "ppl": 18.972868721496422,
+      "scored_tokens": 8184,
+      "prefill_tok_s": 15284.51724961079,
+      "decode_tok_s_b1": 158.7030917746611,
+      "ms_per_step_b1": 6.301074470684398,
+      "decode_tok_s_b8": 1171.1045477835175,
+      "ms_per_step_b8": 6.831157828855794,
+      "kv_cache_tokens": 174752.0
+    },
+    {
+      "engine": "vllm",
+      "mode": "gptq_int8",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct-GPTQ-Int8",
+      "weights_gib": 0.6,
+      "ppl": 18.932704236925947,
+      "scored_tokens": 8184,
+      "prefill_tok_s": 17341.508367388422,
+      "decode_tok_s_b1": 253.42113199398187,
+      "ms_per_step_b1": 3.946000841096975,
+      "decode_tok_s_b8": 1281.2233840466831,
+      "ms_per_step_b8": 6.244032148970291,
+      "kv_cache_tokens": 174752.0
+    },
+    {
+      "engine": "vllm",
+      "mode": "gptq",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct-GPTQ-Int4",
+      "weights_gib": 0.43,
+      "ppl": 21.93835189250525,
+      "scored_tokens": 8184,
+      "prefill_tok_s": 17519.623233866725,
+      "decode_tok_s_b1": 261.83763795763707,
+      "ms_per_step_b1": 3.8191606363398023,
+      "decode_tok_s_b8": 2008.3083940587373,
+      "ms_per_step_b8": 3.9834519557189196,
+      "kv_cache_tokens": 174752.0
+    },
+    {
+      "engine": "vllm",
+      "mode": "awq",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct-AWQ",
+      "weights_gib": 0.43,
+      "ppl": 22.25207737553809,
+      "scored_tokens": 8184,
+      "prefill_tok_s": 18004.77976039183,
+      "decode_tok_s_b1": 265.0391158732242,
+      "ms_per_step_b1": 3.773027980059851,
+      "decode_tok_s_b8": 2002.448340604545,
+      "ms_per_step_b8": 3.9951093058334664,
+      "kv_cache_tokens": 174752.0
+    },
+    {
+      "engine": "vllm",
+      "mode": "nf4_bnb",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.45,
+      "ppl": 20.80967729113821,
+      "scored_tokens": 8184,
+      "prefill_tok_s": 15911.194215344281,
+      "decode_tok_s_b1": 157.1533463696442,
+      "ms_per_step_b1": 6.363211621646769,
+      "decode_tok_s_b8": 765.8756206738062,
+      "ms_per_step_b8": 10.445560328662395,
+      "kv_cache_tokens": 174752.0
+    }
+  ],
+  "label": "pilot, shared GPU"
+}

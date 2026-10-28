@@ -1,0 +1,32 @@
+{
+  "arg_passing": {
+    "size_mib": 100,
+    "k_tasks": 16,
+    "by_value_s": 0.26237726025283337,
+    "put_s": 0.014475533738732338,
+    "by_ref_s": 0.006751115433871746,
+    "by_ref_total_s": 0.021226649172604084,
+    "speedup": 12.360747950339114
+  },
+  "spilling": {
+    "store_mib": 256,
+    "obj_mib": 50,
+    "n_objs": 12,
+    "total_put_mib": 600,
+    "put_s_mean": 0.09600985624517004,
+    "put_s_max": 0.7238777279853821,
+    "get_s_mean": 0.060972436175992094,
+    "get_s_max": 0.539553452283144,
+    "spilled_mib_after_put": 500.0,
+    "spilled_mib_after_get": 500.0
+  },
+  "backpressure": {
+    "n": 120,
+    "obj_mib": 10,
+    "window": 8,
+    "unbounded_s": 2.7936858609318733,
+    "bounded_s": 0.17438203655183315,
+    "spilled_mib_unbounded": 1200.0,
+    "spilled_mib_bounded": 0.0
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "points": [
+    {
+      "run_dir": "runs/L03_serving_slo/20261029_021818_short_qa_baseline_1df4d794841b",
+      "label": "baseline",
+      "server_config": "configs/l03_server_pilot_lowmem.yaml"
+    },
+    {
+      "run_dir": "runs/L03_serving_slo/20261029_021904_short_qa_max_num_seqs_8_a66ac0a3942c",
+      "label": "max_num_seqs_8",
+      "server_config": "configs/l03_server_pilot_small_batch.yaml"
+    }
+  ],
+  "rows": [
+    {
+      "run": "20261029_021818_short_qa_baseline_1df4d794841b",
+      "mode": "open",
+      "offered_load": 16.0,
+      "label": "baseline",
+      "n_submitted": 192,
+      "n_success": 192,
+      "error_rate": 0.0,
+      "requests_per_s": 15.011577867200169,
+      "output_tokens_per_s": 1924.2184525503299,
+      "input_tokens_per_s": 2060.6518034787896,
+      "ttft_mean": 0.0442355335932613,
+      "ttft_p50": 0.043003137689083815,
+      "ttft_p95": 0.05943432697094977,
+      "ttft_p99": 0.06920979780144994,
+      "tpot_mean": 0.01114916980980718,
+      "tpot_p50": 0.01120340774115015,
+      "tpot_p95": 0.012089386714268287,
+      "tpot_p99": 0.01236366398614697,
+      "e2e_p50": 1.3739880556240678,
+      "e2e_p99": 2.8088941450137646,
+      "p99_undersampled": false,
+      "max_in_flight": 40,
+      "rejected": 0,
+      "goodput_rps": 15.011577867200169,
+      "slo_attainment": 1.0
+    },
+    {
+      "run": "20261029_021904_short_qa_max_num_seqs_8_a66ac0a3942c",
+      "mode": "open",
+      "offered_load": 16.0,
+      "label": "max_num_seqs_8",
+      "n_submitted": 192,
+      "n_success": 192,
+      "error_rate": 0.0,
+      "requests_per_s": 7.960188728691362,
+      "output_tokens_per_s": 1020.3552333428287,
+      "input_tokens_per_s": 1092.7017402780705,
+      "ttft_mean": 5.86768219928975,
+      "ttft_p50": 5.225058129057288,
+      "ttft_p95": 11.426452646870166,
+      "ttft_p99": 11.68828020049259,
+      "tpot_mean": 0.00749538176127307,
+      "tpot_p50": 0.007472896406770043,
+      "tpot_p95": 0.008292831402823176,
+      "tpot_p99": 0.008437149862892351,
+      "e2e_p50": 6.278246427886188,
+      "e2e_p99": 12.730997136151418,
+      "p99_undersampled": false,
+      "max_in_flight": 104,
+      "rejected": 0,
+      "goodput_rps": 0.3731338466574076,
+      "slo_attainment": 0.046875
+    }
+  ],
+  "notes": [
+    "workload: benchmarks/workloads/short_qa.yaml",
+    "backend: vllm (max_num_seqs_8)",
+    "SLO: ttft=0.5,tpot=0.05",
+    "tag: pilot, shared GPU, 0.10 util, A6000, enforce-eager, max_model_len 2048"
+  ],
+  "elapsed_s": 105.46978813689202
+}

@@ -1,0 +1,16 @@
+{
+  "accuracy": {
+    "mean": 0.3,
+    "ci_low": 0.21,
+    "ci_high": 0.39,
+    "n": 100
+  },
+  "format_rate": 0.11,
+  "mean_completion_chars": 742.68,
+  "label": "eval_small_base",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": null,
+  "n": 100,
+  "wall_s": 22.718044799752533,
+  "run_dir": "runs/L06_post_training/20261029_020812_eval_small_base_3d03f73fa948"
+}

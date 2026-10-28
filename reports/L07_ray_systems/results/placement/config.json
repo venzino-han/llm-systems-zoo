@@ -1,0 +1,6 @@
+{
+  "actors": 3,
+  "gpu_frac": 0.25,
+  "alloc_mib": 512,
+  "smoke": false
+}

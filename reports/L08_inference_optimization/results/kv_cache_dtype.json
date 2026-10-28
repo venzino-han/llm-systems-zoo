@@ -1,0 +1,29 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "rows": [
+    {
+      "kv_cache_dtype": "auto",
+      "kv_cache_tokens": 174752.0,
+      "max_concurrency_x": 85.33,
+      "ppl": 16.260198654543565,
+      "ppl_tokens": 65472,
+      "batch": 64,
+      "output_tokens_per_s": 12739.21666650557,
+      "wall_s": 0.6430536676198244,
+      "ms_per_step": 5.023856778279878
+    },
+    {
+      "kv_cache_dtype": "fp8",
+      "kv_cache_tokens": 349520.0,
+      "max_concurrency_x": 170.66,
+      "ppl": 16.89289105360099,
+      "ppl_tokens": 65472,
+      "batch": 64,
+      "output_tokens_per_s": 18582.439526862883,
+      "wall_s": 0.4408463155850768,
+      "ms_per_step": 3.4441118405084126
+    }
+  ],
+  "label": "pilot, shared GPU"
+}

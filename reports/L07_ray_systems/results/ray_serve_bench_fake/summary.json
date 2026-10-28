@@ -1,0 +1,126 @@
+{
+  "rows": [
+    {
+      "replicas": 1,
+      "batch_wait_ms": 0,
+      "concurrency": 1,
+      "rps": 17.51164331827477,
+      "e2e_p50": 0.0560722011141479,
+      "e2e_p99": 0.08138272805139428,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 1,
+      "batch_wait_ms": 0,
+      "concurrency": 4,
+      "rps": 19.700306147367737,
+      "e2e_p50": 0.20282943360507488,
+      "e2e_p99": 0.20484065600670875,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 1,
+      "batch_wait_ms": 0,
+      "concurrency": 16,
+      "rps": 19.599346077441414,
+      "e2e_p50": 0.8106947303749621,
+      "e2e_p99": 0.8401242270693183,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 0,
+      "concurrency": 1,
+      "rps": 17.5167960323172,
+      "e2e_p50": 0.056391555815935135,
+      "e2e_p99": 0.06886126617901031,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 0,
+      "concurrency": 4,
+      "rps": 34.54435222098704,
+      "e2e_p50": 0.10696384636685252,
+      "e2e_p99": 0.20356918920762837,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 0,
+      "concurrency": 16,
+      "rps": 36.89886850895192,
+      "e2e_p50": 0.4025833806954324,
+      "e2e_p99": 0.672440236210823,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 1,
+      "batch_wait_ms": 10,
+      "concurrency": 1,
+      "rps": 14.644875291147644,
+      "e2e_p50": 0.0670241666957736,
+      "e2e_p99": 0.1005462407972664,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 1,
+      "batch_wait_ms": 10,
+      "concurrency": 4,
+      "rps": 39.84454119662791,
+      "e2e_p50": 0.10130859492346644,
+      "e2e_p99": 0.17436387110501528,
+      "error_rate": 0.0,
+      "mean_batch": 2.78125
+    },
+    {
+      "replicas": 1,
+      "batch_wait_ms": 10,
+      "concurrency": 16,
+      "rps": 89.9573702311953,
+      "e2e_p50": 0.1542855673469603,
+      "e2e_p99": 0.2128223587758839,
+      "error_rate": 0.0,
+      "mean_batch": 5.3125
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 10,
+      "concurrency": 1,
+      "rps": 14.725089660434783,
+      "e2e_p50": 0.06697893375530839,
+      "e2e_p99": 0.08633960837498313,
+      "error_rate": 0.0,
+      "mean_batch": 1.0
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 10,
+      "concurrency": 4,
+      "rps": 37.17416634234818,
+      "e2e_p50": 0.1004304806701839,
+      "e2e_p99": 0.20327061789110304,
+      "error_rate": 0.0,
+      "mean_batch": 1.5
+    },
+    {
+      "replicas": 2,
+      "batch_wait_ms": 10,
+      "concurrency": 16,
+      "rps": 149.55218352518642,
+      "e2e_p50": 0.09261095989495516,
+      "e2e_p99": 0.17694306476041674,
+      "error_rate": 0.0,
+      "mean_batch": 6.296875
+    }
+  ],
+  "device": "cpu",
+  "fake": true
+}

@@ -1,0 +1,106 @@
+{
+  "backend": "nccl",
+  "world_size": 2,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "rows": [
+    {
+      "op": "all_reduce",
+      "bytes": 4096,
+      "mean_us": 14.453958719968796,
+      "algbw_gbps": 0.2833825721628215,
+      "busbw_gbps": 0.2833825721628215,
+      "world_size": 2
+    },
+    {
+      "op": "all_gather",
+      "bytes": 4096,
+      "mean_us": 24.852678179740906,
+      "algbw_gbps": 0.1648112115071335,
+      "busbw_gbps": 0.08240560575356674,
+      "world_size": 2
+    },
+    {
+      "op": "all_reduce",
+      "bytes": 65536,
+      "mean_us": 36.59481182694435,
+      "algbw_gbps": 1.7908549526068769,
+      "busbw_gbps": 1.7908549526068769,
+      "world_size": 2
+    },
+    {
+      "op": "all_gather",
+      "bytes": 65536,
+      "mean_us": 39.25904631614685,
+      "algbw_gbps": 1.6693222619889698,
+      "busbw_gbps": 0.8346611309944849,
+      "world_size": 2
+    },
+    {
+      "op": "all_reduce",
+      "bytes": 1048576,
+      "mean_us": 401.7852246761322,
+      "algbw_gbps": 2.6097923358063446,
+      "busbw_gbps": 2.6097923358063446,
+      "world_size": 2
+    },
+    {
+      "op": "all_gather",
+      "bytes": 1048576,
+      "mean_us": 429.921206086874,
+      "algbw_gbps": 2.438995762837795,
+      "busbw_gbps": 1.2194978814188975,
+      "world_size": 2
+    },
+    {
+      "op": "all_reduce",
+      "bytes": 16777216,
+      "mean_us": 6442.87021830678,
+      "algbw_gbps": 2.6039971986909185,
+      "busbw_gbps": 2.6039971986909185,
+      "world_size": 2
+    },
+    {
+      "op": "all_gather",
+      "bytes": 16777216,
+      "mean_us": 7223.858255892992,
+      "algbw_gbps": 2.3224730338962125,
+      "busbw_gbps": 1.1612365169481063,
+      "world_size": 2
+    },
+    {
+      "op": "all_reduce",
+      "bytes": 134217728,
+      "mean_us": 47010.327987372875,
+      "algbw_gbps": 2.8550689549762622,
+      "busbw_gbps": 2.8550689549762622,
+      "world_size": 2
+    },
+    {
+      "op": "all_gather",
+      "bytes": 134217728,
+      "mean_us": 52067.876085639,
+      "algbw_gbps": 2.577745398703117,
+      "busbw_gbps": 1.2888726993515585,
+      "world_size": 2
+    }
+  ],
+  "tp_decode_floor": {
+    "message_bytes": 7168,
+    "all_reduce_us": 15.561001375317574,
+    "all_reduces_per_token": 56,
+    "comm_floor_per_token_ms": 0.8714160770177841,
+    "assumes": "28 layers, hidden 3584, batch 1, 2-byte dtype; latency interpolated between measured sizes"
+  },
+  "gpus": [
+    "NVIDIA RTX A6000",
+    "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+  ],
+  "tp_decode_floor_batch64": {
+    "message_bytes": 458752,
+    "all_reduce_us": 182.6709769666195,
+    "all_reduces_per_token": 56,
+    "comm_floor_per_token_ms": 10.229574710130692,
+    "assumes": "28 layers, hidden 3584, batch 64, 2-byte dtype; latency interpolated between measured sizes"
+  }
+}

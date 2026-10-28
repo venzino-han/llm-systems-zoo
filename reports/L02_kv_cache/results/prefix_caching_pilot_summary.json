@@ -1,0 +1,251 @@
+{
+  "label": "pilot, shared GPU",
+  "rows": [
+    {
+      "prefix_caching": false,
+      "prefix_tokens": 128,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 5499,
+      "prefill_only": {
+        "cold_s": 0.13451915979385376,
+        "warm_same_s": 0.11973138526082039,
+        "warm_new_suffix_s": 0.16341620963066816,
+        "cold_prompt_tokens_per_s": 40878.93507829694,
+        "warm_new_prompt_tokens_per_s": 33650.27259185681,
+        "speedup_warm_new_vs_cold": 0.823169011800459,
+        "cached_tokens": {
+          "cold": 0,
+          "warm_same": 0,
+          "warm_new": 0
+        },
+        "cached_fraction_warm_new": 0.0
+      },
+      "generation_warm": {
+        "wall_s": 1.082821243442595,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 1891.3555791432655,
+        "cached_tokens": 0
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": false,
+      "prefix_tokens": 512,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 17787,
+      "prefill_only": {
+        "cold_s": 0.2820882461965084,
+        "warm_same_s": 0.2777869189158082,
+        "warm_new_suffix_s": 0.2793525978922844,
+        "cold_prompt_tokens_per_s": 63054.7363806474,
+        "warm_new_prompt_tokens_per_s": 63672.219747383526,
+        "speedup_warm_new_vs_cold": 1.0097928149759998,
+        "cached_tokens": {
+          "cold": 0,
+          "warm_same": 0,
+          "warm_new": 0
+        },
+        "cached_fraction_warm_new": 0.0
+      },
+      "generation_warm": {
+        "wall_s": 1.1282693101093173,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 1815.1694649937529,
+        "cached_tokens": 0
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": false,
+      "prefix_tokens": 1024,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 34171,
+      "prefill_only": {
+        "cold_s": 0.351436136290431,
+        "warm_same_s": 0.3526328708976507,
+        "warm_new_suffix_s": 0.3567846231162548,
+        "cold_prompt_tokens_per_s": 97232.4598167124,
+        "warm_new_prompt_tokens_per_s": 95774.86748599507,
+        "speedup_warm_new_vs_cold": 0.9850092002869725,
+        "cached_tokens": {
+          "cold": 0,
+          "warm_same": 0,
+          "warm_new": 0
+        },
+        "cached_fraction_warm_new": 0.0
+      },
+      "generation_warm": {
+        "wall_s": 0.9567321799695492,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 2140.6199591459167,
+        "cached_tokens": 0
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 0.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": true,
+      "prefix_tokens": 128,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 5499,
+      "prefill_only": {
+        "cold_s": 0.07490039244294167,
+        "warm_same_s": 0.07418368943035603,
+        "warm_new_suffix_s": 0.08011912647634745,
+        "cold_prompt_tokens_per_s": 73417.50584536765,
+        "warm_new_prompt_tokens_per_s": 68635.29648720521,
+        "speedup_warm_new_vs_cold": 0.9348628191178989,
+        "cached_tokens": {
+          "cold": 3968,
+          "warm_same": 5360,
+          "warm_new": 4112
+        },
+        "cached_fraction_warm_new": 0.7477723222404073
+      },
+      "generation_warm": {
+        "wall_s": 1.0176940634846687,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 2012.392597621606,
+        "cached_tokens": 5440
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 36.0,
+          "vllm:prefix_cache_hits": 0.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 22174.0,
+          "vllm:prefix_cache_hits": 18880.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": true,
+      "prefix_tokens": 512,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 17787,
+      "prefill_only": {
+        "cold_s": 0.14156274031847715,
+        "warm_same_s": 0.11772768199443817,
+        "warm_new_suffix_s": 0.11245591659098864,
+        "cold_prompt_tokens_per_s": 125647.46881830736,
+        "warm_new_prompt_tokens_per_s": 158168.64544969006,
+        "speedup_warm_new_vs_cold": 1.2588287447191633,
+        "cached_tokens": {
+          "cold": 15872,
+          "warm_same": 17648,
+          "warm_new": 16400
+        },
+        "cached_fraction_warm_new": 0.9220217012424805
+      },
+      "generation_warm": {
+        "wall_s": 0.977626021951437,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 2094.8705885630907,
+        "cached_tokens": 17728
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 22174.0,
+          "vllm:prefix_cache_hits": 18880.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 88996.0,
+          "vllm:prefix_cache_hits": 82432.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    },
+    {
+      "prefix_caching": true,
+      "prefix_tokens": 1024,
+      "n_prompts": 32,
+      "suffix_tokens": 48,
+      "prompt_tokens_per_batch": 34171,
+      "prefill_only": {
+        "cold_s": 0.16387307830154896,
+        "warm_same_s": 0.18727758340537548,
+        "warm_new_suffix_s": 0.14114217460155487,
+        "cold_prompt_tokens_per_s": 208521.1332707174,
+        "warm_new_prompt_tokens_per_s": 242103.39748884356,
+        "speedup_warm_new_vs_cold": 1.1610496916613589,
+        "cached_tokens": {
+          "cold": 31744,
+          "warm_same": 34032,
+          "warm_new": 32784
+        },
+        "cached_fraction_warm_new": 0.9594100260454772
+      },
+      "generation_warm": {
+        "wall_s": 0.9975106827914715,
+        "output_tokens": 2048,
+        "output_tokens_per_s": 2053.1108441553724,
+        "cached_tokens": 34112
+      },
+      "engine_prefix_cache_counters": {
+        "before": {
+          "vllm:prefix_cache_queries": 88996.0,
+          "vllm:prefix_cache_hits": 82432.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        },
+        "after": {
+          "vllm:prefix_cache_queries": 224747.0,
+          "vllm:prefix_cache_hits": 214032.0,
+          "vllm:external_prefix_cache_queries": 0.0,
+          "vllm:external_prefix_cache_hits": 0.0
+        }
+      }
+    }
+  ]
+}

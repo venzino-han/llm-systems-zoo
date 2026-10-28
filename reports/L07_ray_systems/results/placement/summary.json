@@ -1,0 +1,95 @@
+{
+  "placement_groups": {
+    "PACK": {
+      "spec": {
+        "bundles": [
+          {
+            "CPU": 1
+          },
+          {
+            "CPU": 1
+          }
+        ],
+        "strategy": "PACK",
+        "total": {
+          "CPU": 2,
+          "GPU": 0
+        }
+      },
+      "ready_s": 0.9640147062018514,
+      "nodes": [
+        "23e264d8",
+        "23e264d8"
+      ]
+    },
+    "SPREAD": {
+      "spec": {
+        "bundles": [
+          {
+            "CPU": 1
+          },
+          {
+            "CPU": 1
+          }
+        ],
+        "strategy": "SPREAD",
+        "total": {
+          "CPU": 2,
+          "GPU": 0
+        }
+      },
+      "ready_s": 0.8500080984085798,
+      "nodes": [
+        "23e264d8",
+        "23e264d8"
+      ]
+    }
+  },
+  "fractional_gpu": {
+    "actors": [
+      {
+        "pid": 924886,
+        "ray_gpu_ids": [
+          "1"
+        ],
+        "cuda_visible_devices": "1",
+        "node": "23e264d8",
+        "torch_allocated_mib": 512.0,
+        "torch_reserved_mib": 512.0,
+        "device_total_mib": 97238.4375
+      },
+      {
+        "pid": 924885,
+        "ray_gpu_ids": [
+          "1"
+        ],
+        "cuda_visible_devices": "1",
+        "node": "23e264d8",
+        "torch_allocated_mib": 512.0,
+        "torch_reserved_mib": 512.0,
+        "device_total_mib": 97238.4375
+      },
+      {
+        "pid": 924884,
+        "ray_gpu_ids": [
+          "1"
+        ],
+        "cuda_visible_devices": "1",
+        "node": "23e264d8",
+        "torch_allocated_mib": 512.0,
+        "torch_reserved_mib": 512.0,
+        "device_total_mib": 97238.4375
+      }
+    ],
+    "logical_gpu_requested_total": 0.75,
+    "nvidia_smi_used_mib_before": [
+      37011,
+      92172
+    ],
+    "nvidia_smi_used_mib_after": [
+      37011,
+      95374
+    ],
+    "actual_alloc_mib_sum": 1536
+  }
+}

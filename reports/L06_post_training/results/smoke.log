@@ -1,0 +1,58 @@
+=== sft --smoke ===
+0, 36836 MiB
+1, 92172 MiB
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+Tokenizing train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]Tokenizing train dataset: 100%|██████████| 16/16 [00:00<00:00, 754.98 examples/s]
+Building labels for train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]Building labels for train dataset: 100%|██████████| 16/16 [00:00<00:00, 4679.18 examples/s]
+Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 16/16 [00:00<00:00, 4535.00 examples/s]
+Dropping fully masked examples from train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]Dropping fully masked examples from train dataset: 100%|██████████| 16/16 [00:00<00:00, 6538.28 examples/s]
+{'loss': '1.608', 'grad_norm': '0.7255', 'learning_rate': '0', 'entropy': '1.373', 'num_tokens': '461', 'mean_token_accuracy': '0.6558', 'epoch': '0.125'}
+{'loss': '1.5', 'grad_norm': '0.7566', 'learning_rate': '0.0001', 'entropy': '1.114', 'num_tokens': '882', 'mean_token_accuracy': '0.6993', 'epoch': '0.25'}
+{'loss': '1.659', 'grad_norm': '0.6916', 'learning_rate': '5e-05', 'entropy': '1.36', 'num_tokens': '1337', 'mean_token_accuracy': '0.6667', 'epoch': '0.375'}
+{'train_runtime': '0.6502', 'train_samples_per_second': '9.227', 'train_steps_per_second': '4.614', 'train_loss': '1.589', 'epoch': '0.375'}
+[sft] sft_tiny_lora16: loss 1.6081146001815796 → 1.6591917276382446, wall 0.8s, peak alloc 1.43 GiB, phases {'forward_loss': 0.39422191918564475, 'backward': 0.4667590872237662, 'optimizer': 0.013703538209381801}
+run dir: runs/L06_post_training/20261029_020352_sft_tiny_lora16_7f647860f004
+=== dpo --smoke ===
+0, 43053 MiB
+1, 92172 MiB
+Traceback (most recent call last):
+  File "/home/kirc/workspace/llm_system_zoo/post_training/dpo.py", line 89, in <module>
+    sys.exit(main())
+  File "/home/kirc/workspace/llm_system_zoo/post_training/dpo.py", line 51, in main
+    args = DPOConfig(
+TypeError: DPOConfig.__init__() got an unexpected keyword argument 'max_prompt_length'
+=== grpo --smoke ===
+0, 41551 MiB
+1, 92172 MiB
+Traceback (most recent call last):
+  File "/home/kirc/workspace/llm_system_zoo/post_training/grpo.py", line 141, in <module>
+    sys.exit(main())
+  File "/home/kirc/workspace/llm_system_zoo/post_training/grpo.py", line 90, in main
+    args = GRPOConfig(
+TypeError: GRPOConfig.__init__() got an unexpected keyword argument 'max_prompt_length'
+=== eval_gsm8k --smoke ===
+0, 36836 MiB
+1, 92172 MiB
+[eval] eval_tiny_base: n=8 accuracy=0.000 (95% CI 0.000–0.000) format_rate=0.12 wall=3.8s
+run dir: runs/L06_post_training/20261029_020458_eval_tiny_base_eac540b18c96
+L06 SMOKE DONE
+=== dpo --smoke (rerun) ===
+0, 36840 MiB
+1, 92172 MiB
+{'loss': '0.6931', 'grad_norm': '5.494', 'learning_rate': '0', 'entropy': '0.9299', 'num_tokens': '1024', 'logits/chosen': '0.6698', 'logits/rejected': '0.5195', 'mean_token_accuracy': '0.7282', 'rewards/chosen': '0', 'rewards/rejected': '0', 'rewards/accuracies': '0', 'rewards/margins': '0', 'logps/chosen': '-195.3', 'logps/rejected': '-206.6', 'epoch': '0.1667'}
+{'loss': '0.6931', 'grad_norm': '5.23', 'learning_rate': '5e-05', 'entropy': '1.767', 'num_tokens': '1896', 'logits/chosen': '2.328', 'logits/rejected': '3.387', 'mean_token_accuracy': '0.5767', 'rewards/chosen': '0', 'rewards/rejected': '0', 'rewards/accuracies': '0', 'rewards/margins': '0', 'logps/chosen': '-211.6', 'logps/rejected': '-309.3', 'epoch': '0.3333'}
+{'loss': '0.7237', 'grad_norm': '4.108', 'learning_rate': '2.5e-05', 'entropy': '1.628', 'num_tokens': '2920', 'logits/chosen': '3.81', 'logits/rejected': '4.579', 'mean_token_accuracy': '0.5848', 'rewards/chosen': '-0.04667', 'rewards/rejected': '0.01176', 'rewards/accuracies': '0.5', 'rewards/margins': '-0.05843', 'logps/chosen': '-143.6', 'logps/rejected': '-132.9', 'epoch': '0.5'}
+{'train_runtime': '0.7036', 'train_samples_per_second': '8.527', 'train_steps_per_second': '4.264', 'train_loss': '0.7033', 'epoch': '0.5'}
+[dpo] dpo_tiny_lora16: loss 0.6931471824645996 → 0.7236521244049072, margin -0.019, acc 0.17, wall 0.8s, peak alloc 2.35 GiB, phases {'policy_forward': 0.5643445302641019, 'backward': 0.3443412124347035, 'optimizer': 0.009007769448006719}
+run dir: runs/L06_post_training/20261029_020700_dpo_tiny_lora16_e073b9a206e0
+=== grpo --smoke (rerun) ===
+0, 36840 MiB
+1, 92172 MiB
+{'loss': '0', 'grad_norm': '0', 'learning_rate': '5e-05', 'num_tokens': '320', 'completions/mean_length': '48', 'completions/min_length': '48', 'completions/max_length': '48', 'completions/clipped_ratio': '1', 'completions/mean_terminated_length': '0', 'completions/min_terminated_length': '0', 'completions/max_terminated_length': '0', 'rewards/correctness_reward/mean': '0', 'rewards/correctness_reward/std': '0', 'rewards/format_reward/mean': '0', 'rewards/format_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '1.241', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '1.197', 'epoch': '0.0625'}
+{'loss': '0', 'grad_norm': '0.6656', 'learning_rate': '3.333e-05', 'num_tokens': '628', 'completions/mean_length': '48', 'completions/min_length': '48', 'completions/max_length': '48', 'completions/clipped_ratio': '1', 'completions/mean_terminated_length': '0', 'completions/min_terminated_length': '0', 'completions/max_terminated_length': '0', 'rewards/correctness_reward/mean': '0.5', 'rewards/correctness_reward/std': '0.7071', 'rewards/format_reward/mean': '0', 'rewards/format_reward/std': '0', 'reward': '0.5', 'reward_std': '0.7071', 'frac_reward_zero_std': '0', 'entropy': '1.191', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '0.8416', 'epoch': '0.125'}
+{'loss': '0', 'grad_norm': '0', 'learning_rate': '1.667e-05', 'num_tokens': '944', 'completions/mean_length': '48', 'completions/min_length': '48', 'completions/max_length': '48', 'completions/clipped_ratio': '1', 'completions/mean_terminated_length': '0', 'completions/min_terminated_length': '0', 'completions/max_terminated_length': '0', 'rewards/correctness_reward/mean': '0', 'rewards/correctness_reward/std': '0', 'rewards/format_reward/mean': '0', 'rewards/format_reward/std': '0', 'reward': '0', 'reward_std': '0', 'frac_reward_zero_std': '1', 'entropy': '0.9784', 'clip_ratio/low_mean': '0', 'clip_ratio/high_mean': '0', 'clip_ratio/region_mean': '0', 'clip_ratio/low_min': '0', 'clip_ratio/high_max': '0', 'step_time': '0.8397', 'epoch': '0.1875'}
+{'train_runtime': '2.943', 'train_samples_per_second': '2.038', 'train_steps_per_second': '1.019', 'train_loss': '0', 'epoch': '0.1875'}
+[grpo] grpo_tiny_G2_L48_hf: reward 0.16666666666666666 → 0.16666666666666666 (first/last 5), wall 3.1s, peak alloc 1.16 GiB
+phase share: {'rollout': 0.912, 'reward': 0.0, 'score_other': 0.005, 'learner_forward_loss': 0.031, 'learner_backward': 0.043, 'optimizer': 0.001} unaccounted 0.008
+run dir: runs/L06_post_training/20261029_020714_grpo_tiny_G2_L48_hf_195575e74298
+L06 SMOKE RERUN DONE

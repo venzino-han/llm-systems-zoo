@@ -1,0 +1,161 @@
+{
+  "trace_id": "2493d31a6196",
+  "spans": [
+    {
+      "span_id": "e20c0611",
+      "parent_id": null,
+      "name": "agent.task",
+      "kind": "other",
+      "t_start": 5150380.005557445,
+      "t_end": 5150381.492492631,
+      "attributes": {
+        "task": "What is 557 * 92 + 830? Use the calculator."
+      },
+      "duration_s": 1.4869351861998439
+    },
+    {
+      "span_id": "f858b6fb",
+      "parent_id": "e20c0611",
+      "name": "model",
+      "kind": "model",
+      "t_start": 5150380.005562754,
+      "t_end": 5150380.421237953,
+      "attributes": {
+        "step": 0,
+        "prompt_tokens": 208,
+        "output_tokens": 37
+      },
+      "duration_s": 0.4156751986593008
+    },
+    {
+      "span_id": "f59cb2ca",
+      "parent_id": "e20c0611",
+      "name": "tool:calculator",
+      "kind": "tool",
+      "t_start": 5150380.421304432,
+      "t_end": 5150380.421346534,
+      "attributes": {
+        "expression": "557*92+830",
+        "wait_s": 3.7466175854206085e-05,
+        "chars": 5
+      },
+      "duration_s": 4.210229963064194e-05
+    },
+    {
+      "span_id": "f21c2dd9",
+      "parent_id": "e20c0611",
+      "name": "model",
+      "kind": "model",
+      "t_start": 5150380.421355001,
+      "t_end": 5150380.773697243,
+      "attributes": {
+        "step": 1,
+        "prompt_tokens": 272,
+        "output_tokens": 32
+      },
+      "duration_s": 0.3523422423750162
+    },
+    {
+      "span_id": "197a60b2",
+      "parent_id": "e20c0611",
+      "name": "tool:calculator",
+      "kind": "tool",
+      "t_start": 5150380.773761164,
+      "t_end": 5150380.773794244,
+      "attributes": {
+        "expression": "52074",
+        "wait_s": 2.8755515813827515e-05,
+        "chars": 5
+      },
+      "duration_s": 3.307964652776718e-05
+    },
+    {
+      "span_id": "d182ad4c",
+      "parent_id": "e20c0611",
+      "name": "model",
+      "kind": "model",
+      "t_start": 5150380.773801376,
+      "t_end": 5150381.133413058,
+      "attributes": {
+        "step": 2,
+        "prompt_tokens": 331,
+        "output_tokens": 32
+      },
+      "duration_s": 0.3596116816624999
+    },
+    {
+      "span_id": "4e74cf25",
+      "parent_id": "e20c0611",
+      "name": "tool:calculator",
+      "kind": "tool",
+      "t_start": 5150381.133472017,
+      "t_end": 5150381.133496849,
+      "attributes": {
+        "expression": "52074",
+        "wait_s": 2.0648352801799774e-05,
+        "chars": 5
+      },
+      "duration_s": 2.4831853806972504e-05
+    },
+    {
+      "span_id": "8301c67b",
+      "parent_id": "e20c0611",
+      "name": "model",
+      "kind": "model",
+      "t_start": 5150381.133503532,
+      "t_end": 5150381.492408325,
+      "attributes": {
+        "step": 3,
+        "prompt_tokens": 419,
+        "output_tokens": 32
+      },
+      "duration_s": 0.35890479292720556
+    },
+    {
+      "span_id": "de266118",
+      "parent_id": "e20c0611",
+      "name": "verify",
+      "kind": "verify",
+      "t_start": 5150381.492474739,
+      "t_end": 5150381.492490355,
+      "attributes": {
+        "n_claims": 1,
+        "n_unsupported": 0
+      },
+      "duration_s": 1.5615485608577728e-05
+    }
+  ],
+  "breakdown": {
+    "retrieval": {
+      "total_s": 0.0,
+      "count": 0,
+      "share": 0.0
+    },
+    "rerank": {
+      "total_s": 0.0,
+      "count": 0,
+      "share": 0.0
+    },
+    "model": {
+      "total_s": 1.4865339156240225,
+      "count": 4,
+      "share": 0.999730135799095
+    },
+    "tool": {
+      "total_s": 0.00010001379996538162,
+      "count": 3,
+      "share": 6.726170776884137e-05
+    },
+    "verify": {
+      "total_s": 1.5615485608577728e-05,
+      "count": 1,
+      "share": 1.050179305292128e-05
+    },
+    "other": {
+      "total_s": 1.4869351861998439,
+      "count": 1,
+      "share": 1.0
+    },
+    "_wall_s": 1.4869351861998439
+  }
+}

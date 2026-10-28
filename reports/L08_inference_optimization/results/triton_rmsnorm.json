@@ -1,0 +1,72 @@
+{
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "correctness_ok": true,
+  "bench": [
+    {
+      "hidden": 896,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.022992494799311935,
+      "torch_eager_rmsnorm_ms": 0.07931482374083762,
+      "triton_fused_add_rmsnorm_ms": 0.038816569591756396,
+      "torch_eager_add_rmsnorm_ms": 0.08249905385478898,
+      "torch_compiled_rmsnorm_ms": 0.025737662377839834,
+      "torch_compiled_add_rmsnorm_ms": 0.056592000158925126
+    },
+    {
+      "hidden": 1536,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.023027788051288876,
+      "torch_eager_rmsnorm_ms": 0.16024581820450046,
+      "triton_fused_add_rmsnorm_ms": 0.04785420888006457,
+      "torch_eager_add_rmsnorm_ms": 0.10977004864365582,
+      "torch_compiled_rmsnorm_ms": 0.022685706469233534,
+      "torch_compiled_add_rmsnorm_ms": 0.06891414137395817
+    },
+    {
+      "hidden": 2048,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.064083736770562,
+      "torch_eager_rmsnorm_ms": 0.19207511169628966,
+      "triton_fused_add_rmsnorm_ms": 0.10996088146099023,
+      "torch_eager_add_rmsnorm_ms": 0.2130501206662204,
+      "torch_compiled_rmsnorm_ms": 0.029565278820845545,
+      "torch_compiled_add_rmsnorm_ms": 0.0756597822867178
+    },
+    {
+      "hidden": 3584,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.0541882489821272,
+      "torch_eager_rmsnorm_ms": 0.30194588423154917,
+      "triton_fused_add_rmsnorm_ms": 0.1651397515712172,
+      "torch_eager_add_rmsnorm_ms": 0.3751515481673496,
+      "torch_compiled_rmsnorm_ms": 0.04933811537207772,
+      "torch_compiled_add_rmsnorm_ms": 0.15272319941985898
+    },
+    {
+      "hidden": 4096,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.08656472108922288,
+      "torch_eager_rmsnorm_ms": 0.37128021961285007,
+      "triton_fused_add_rmsnorm_ms": 0.1440123199671507,
+      "torch_eager_add_rmsnorm_ms": 0.42608246023838336,
+      "torch_compiled_rmsnorm_ms": 0.06613037801052193,
+      "torch_compiled_add_rmsnorm_ms": 0.2024721214122276
+    },
+    {
+      "hidden": 8192,
+      "rows": 4096,
+      "dtype": "bfloat16",
+      "triton_rmsnorm_ms": 0.11104172597840137,
+      "torch_eager_rmsnorm_ms": 1.3252931657959433,
+      "triton_fused_add_rmsnorm_ms": 0.3645290934467969,
+      "torch_eager_add_rmsnorm_ms": 1.6136672894159954,
+      "torch_compiled_rmsnorm_ms": 0.18480816206001505,
+      "torch_compiled_add_rmsnorm_ms": 0.3784657789187299
+    }
+  ]
+}

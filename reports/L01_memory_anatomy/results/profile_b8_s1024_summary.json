@@ -1,0 +1,214 @@
+{
+  "label": "pilot, shared GPU",
+  "gpu": "NVIDIA RTX A6000",
+  "prefill": {
+    "mean_s": 0.13304239325225353,
+    "std_s": 0.04354001209139824,
+    "tokens_per_s": 61574.35836611606
+  },
+  "decode": {
+    "ms_per_step": 8.322517518536188,
+    "tokens_per_s": 961.2476011233541,
+    "share_of_total": 0.8001416733829437
+  },
+  "roofline": {
+    "gpu_spec": {
+      "name": "RTX A6000",
+      "peak_tflops_bf16": 155,
+      "bandwidth_gb_s": 768,
+      "memory_gib": 48,
+      "source": "NVIDIA datasheet: 309.7 TFLOPS with sparsity \u2192 ~155 dense; 768 GB/s GDDR6"
+    },
+    "prefill_bound_s": 0.054548452411458066,
+    "prefill_bound": "compute",
+    "prefill_fraction_of_roofline": 0.4100080514038265,
+    "decode_bound_s_per_step": 0.0014217116666666667,
+    "decode_bound": "memory",
+    "decode_fraction_of_roofline": 0.17082711613405238,
+    "decode_effective_bandwidth_gb_s": 131.19522519095221
+  },
+  "top_kernels_prefill": [
+    {
+      "name": "aten::linear",
+      "device_time_ms": 98.90142599999993,
+      "calls": 169,
+      "cpu_time_ms": 3.0836580000000113
+    },
+    {
+      "name": "aten::matmul",
+      "device_time_ms": 94.23224299999994,
+      "calls": 98,
+      "cpu_time_ms": 1.5455919999999925
+    },
+    {
+      "name": "aten::mm",
+      "device_time_ms": 94.23051399999994,
+      "calls": 97,
+      "cpu_time_ms": 1.1546209999999946
+    },
+    {
+      "name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+      "device_time_ms": 54.65970199999991,
+      "calls": 48,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8",
+      "device_time_ms": 38.05355100000003,
+      "calls": 48,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::mul",
+      "device_time_ms": 30.12078200000009,
+      "calls": 220,
+      "cpu_time_ms": 1.4523289999999915
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,",
+      "device_time_ms": 18.076465000000034,
+      "calls": 24,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::to",
+      "device_time_ms": 8.579454000000041,
+      "calls": 202,
+      "cpu_time_ms": 1.1038720000000044
+    },
+    {
+      "name": "aten::_to_copy",
+      "device_time_ms": 8.579454000000041,
+      "calls": 149,
+      "cpu_time_ms": 1.0182420000000043
+    },
+    {
+      "name": "aten::copy_",
+      "device_time_ms": 8.579454000000041,
+      "calls": 149,
+      "cpu_time_ms": 0.5269890000000107
+    },
+    {
+      "name": "aten::scaled_dot_product_attention",
+      "device_time_ms": 7.910110999999945,
+      "calls": 24,
+      "cpu_time_ms": 0.7699850000000006
+    },
+    {
+      "name": "aten::_scaled_dot_product_flash_attention",
+      "device_time_ms": 7.910110999999945,
+      "calls": 24,
+      "cpu_time_ms": 0.6491830000000014
+    },
+    {
+      "name": "aten::_flash_attention_forward",
+      "device_time_ms": 7.910110999999945,
+      "calls": 24,
+      "cpu_time_ms": 0.49259599999999365
+    },
+    {
+      "name": "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false",
+      "device_time_ms": 7.910110999999945,
+      "calls": 24,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::add",
+      "device_time_ms": 7.472925999999914,
+      "calls": 146,
+      "cpu_time_ms": 0.8936879999999939
+    }
+  ],
+  "top_kernels_decode": [
+    {
+      "name": "aten::linear",
+      "device_time_ms": 165.93884600000817,
+      "calls": 10816,
+      "cpu_time_ms": 228.4665380000011
+    },
+    {
+      "name": "aten::matmul",
+      "device_time_ms": 128.53833400000838,
+      "calls": 6272,
+      "cpu_time_ms": 121.05746800000104
+    },
+    {
+      "name": "aten::mm",
+      "device_time_ms": 128.43852300000836,
+      "calls": 6208,
+      "cpu_time_ms": 96.88156099999408
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_tn_align8",
+      "device_time_ms": 93.55040100000167,
+      "calls": 7680,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::addmm",
+      "device_time_ms": 37.5003229999998,
+      "calls": 4608,
+      "cpu_time_ms": 68.65007799999672
+    },
+    {
+      "name": "aten::mul",
+      "device_time_ms": 30.903603000008093,
+      "calls": 14080,
+      "cpu_time_ms": 108.14922500000021
+    },
+    {
+      "name": "ampere_bf16_s16816gemm_bf16_64x64_ldg8_f2f_stages_64x6_tn",
+      "device_time_ms": 29.81481200000085,
+      "calls": 1536,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::cat",
+      "device_time_ms": 29.398876999999136,
+      "calls": 6208,
+      "cpu_time_ms": 57.274499999999
+    },
+    {
+      "name": "ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x3_tn",
+      "device_time_ms": 27.822656999999396,
+      "calls": 64,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+      "device_time_ms": 21.85458700000556,
+      "calls": 9280,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "aten::scaled_dot_product_attention",
+      "device_time_ms": 20.422838000001416,
+      "calls": 1536,
+      "cpu_time_ms": 75.74564400000001
+    },
+    {
+      "name": "aten::_scaled_dot_product_flash_attention",
+      "device_time_ms": 20.422838000001416,
+      "calls": 1536,
+      "cpu_time_ms": 68.83960200000351
+    },
+    {
+      "name": "aten::_flash_attention_forward",
+      "device_time_ms": 20.422838000001416,
+      "calls": 1536,
+      "cpu_time_ms": 58.971031999999866
+    },
+    {
+      "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonym",
+      "device_time_ms": 18.837134000000542,
+      "calls": 3072,
+      "cpu_time_ms": 0.0
+    },
+    {
+      "name": "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false",
+      "device_time_ms": 13.845569000000454,
+      "calls": 1536,
+      "cpu_time_ms": 0.0
+    }
+  ]
+}

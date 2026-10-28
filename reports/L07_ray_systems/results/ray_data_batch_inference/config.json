@@ -1,0 +1,21 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "source": "rag_qa",
+  "limit": 64,
+  "max_new_tokens": 16,
+  "batch_sizes": [
+    1,
+    8,
+    32
+  ],
+  "concurrency": [
+    1,
+    2
+  ],
+  "slow_preprocess_ms": [
+    0,
+    50
+  ],
+  "gpu_frac": 0.25,
+  "smoke": false
+}

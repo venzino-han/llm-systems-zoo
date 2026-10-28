@@ -1,0 +1,20 @@
+{
+  "n_items": 200,
+  "workers": 4,
+  "work_s": 0.01,
+  "crash_items": [
+    7,
+    101
+  ],
+  "flaky_items": [
+    3,
+    50,
+    150
+  ],
+  "policies": [
+    "naive",
+    "at_least_once",
+    "exactly_once"
+  ],
+  "smoke": false
+}

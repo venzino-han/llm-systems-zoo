@@ -1,0 +1,274 @@
+{
+  "rows": [
+    {
+      "granularity_s": 1e-05,
+      "n_units": 4000,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 0.040547678247094154,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 0.005,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 1e-05,
+      "n_units": 4000,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.05182256642729044,
+      "speedup_vs_sequential": 0.7824328481296754,
+      "ideal_parallel_s": 0.005,
+      "overhead_per_task_ms": 0.01170564160682261
+    },
+    {
+      "granularity_s": 1e-05,
+      "n_units": 4000,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.29018815606832504,
+      "speedup_vs_sequential": 0.13972892207753362,
+      "ideal_parallel_s": 0.005,
+      "overhead_per_task_ms": 0.07129703901708126
+    },
+    {
+      "granularity_s": 1e-05,
+      "n_units": 4000,
+      "backend": "ray_chunked",
+      "chunk": 64,
+      "n_tasks": 63,
+      "wall_s": 0.014325655996799469,
+      "speedup_vs_sequential": 2.8304238393099075,
+      "ideal_parallel_s": 0.005,
+      "overhead_per_task_ms": 0.1480262856634836
+    },
+    {
+      "granularity_s": 0.0001,
+      "n_units": 4000,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 0.40062924660742283,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 0.05,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 0.0001,
+      "n_units": 4000,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.06089164223521948,
+      "speedup_vs_sequential": 6.579379893546384,
+      "ideal_parallel_s": 0.05,
+      "overhead_per_task_ms": 0.002722910558804869
+    },
+    {
+      "granularity_s": 0.0001,
+      "n_units": 4000,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.37705127242952585,
+      "speedup_vs_sequential": 1.0625325410678832,
+      "ideal_parallel_s": 0.05,
+      "overhead_per_task_ms": 0.08176281810738147
+    },
+    {
+      "granularity_s": 0.0001,
+      "n_units": 4000,
+      "backend": "ray_chunked",
+      "chunk": 64,
+      "n_tasks": 63,
+      "wall_s": 0.06261485628783703,
+      "speedup_vs_sequential": 6.398309767984651,
+      "ideal_parallel_s": 0.05,
+      "overhead_per_task_ms": 0.2002358140926512
+    },
+    {
+      "granularity_s": 0.001,
+      "n_units": 4000,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 4.0008261343464255,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 0.001,
+      "n_units": 4000,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.5069682942703366,
+      "speedup_vs_sequential": 7.891669320474346,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.001742073567584157
+    },
+    {
+      "granularity_s": 0.001,
+      "n_units": 4000,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 4000,
+      "wall_s": 0.8084683511406183,
+      "speedup_vs_sequential": 4.948649045694745,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.07711708778515458
+    },
+    {
+      "granularity_s": 0.001,
+      "n_units": 4000,
+      "backend": "ray_chunked",
+      "chunk": 64,
+      "n_tasks": 63,
+      "wall_s": 0.5228351391851902,
+      "speedup_vs_sequential": 7.652175292925975,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.36246252674905083
+    },
+    {
+      "granularity_s": 0.01,
+      "n_units": 400,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 4.000128455460072,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 0.01,
+      "n_units": 400,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 400,
+      "wall_s": 0.502361198887229,
+      "speedup_vs_sequential": 7.962654090962205,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.005902997218072414
+    },
+    {
+      "granularity_s": 0.01,
+      "n_units": 400,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 400,
+      "wall_s": 0.5471635153517127,
+      "speedup_vs_sequential": 7.310663710625549,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.11790878837928176
+    },
+    {
+      "granularity_s": 0.01,
+      "n_units": 400,
+      "backend": "ray_chunked",
+      "chunk": 50,
+      "n_tasks": 8,
+      "wall_s": 0.5040832040831447,
+      "speedup_vs_sequential": 7.935452764659623,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.5104005103930831
+    },
+    {
+      "granularity_s": 0.1,
+      "n_units": 40,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 4.000038364902139,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 0.1,
+      "n_units": 40,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 40,
+      "wall_s": 0.5010037319734693,
+      "speedup_vs_sequential": 7.98404903920748,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.025093299336731434
+    },
+    {
+      "granularity_s": 0.1,
+      "n_units": 40,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 40,
+      "wall_s": 0.5079681510105729,
+      "speedup_vs_sequential": 7.87458496550285,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.19920377526432276
+    },
+    {
+      "granularity_s": 0.1,
+      "n_units": 40,
+      "backend": "ray_chunked",
+      "chunk": 5,
+      "n_tasks": 8,
+      "wall_s": 0.502300675958395,
+      "speedup_vs_sequential": 7.963434166736931,
+      "ideal_parallel_s": 0.5,
+      "overhead_per_task_ms": 0.28758449479937553
+    },
+    {
+      "granularity_s": 1.0,
+      "n_units": 8,
+      "backend": "sequential",
+      "chunk": 1,
+      "n_tasks": 0,
+      "wall_s": 8.000016245990992,
+      "speedup_vs_sequential": 1.0,
+      "ideal_parallel_s": 1.0,
+      "overhead_per_task_ms": null
+    },
+    {
+      "granularity_s": 1.0,
+      "n_units": 8,
+      "backend": "multiprocessing",
+      "chunk": 1,
+      "n_tasks": 8,
+      "wall_s": 1.0008788388222456,
+      "speedup_vs_sequential": 7.992991694583905,
+      "ideal_parallel_s": 1.0,
+      "overhead_per_task_ms": 0.10985485278069973
+    },
+    {
+      "granularity_s": 1.0,
+      "n_units": 8,
+      "backend": "ray_tasks",
+      "chunk": 1,
+      "n_tasks": 8,
+      "wall_s": 1.002969030290842,
+      "speedup_vs_sequential": 7.976334267939597,
+      "ideal_parallel_s": 1.0,
+      "overhead_per_task_ms": 0.37112878635525703
+    },
+    {
+      "granularity_s": 1.0,
+      "n_units": 8,
+      "backend": "ray_chunked",
+      "chunk": 1,
+      "n_tasks": 8,
+      "wall_s": 1.0026216600090265,
+      "speedup_vs_sequential": 7.9790977644737575,
+      "ideal_parallel_s": 1.0,
+      "overhead_per_task_ms": 0.3277075011283159
+    }
+  ],
+  "breakeven_granularity_s": {
+    "multiprocessing": 0.0001,
+    "ray_tasks": 0.0001,
+    "ray_chunked": 1e-05
+  },
+  "workers": 8
+}

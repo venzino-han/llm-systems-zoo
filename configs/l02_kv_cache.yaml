@@ -1,0 +1,20 @@
+# L02 — KV cache lab.
+lab: L02_kv_cache
+simulator:
+  n_requests: 300
+  capacity_tokens: 65536
+  block_size: 16
+  block_sizes: [1, 4, 8, 16, 32, 64, 128, 256]
+  shared_ratios: [0.0, 0.25, 0.5, 0.75, 1.0]
+  prefix_lens: [128, 512, 1024]
+  capacities: [8192, 16384, 32768, 65536, 131072]
+  prefix_variants: [1, 2, 4, 8, 16, 32]
+engine:
+  model: Qwen/Qwen2.5-0.5B-Instruct
+  gpu_memory_utilization: 0.10   # shared GPU: vLLM requires this fraction to be free at start-up
+  max_model_len: 2048
+  enforce_eager: true
+  prefix_tokens: [128, 512, 1024]
+  n_prompts: 32
+  suffix_tokens: 48
+  max_tokens: 64

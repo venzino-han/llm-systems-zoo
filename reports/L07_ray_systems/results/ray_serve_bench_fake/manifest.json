@@ -1,0 +1,117 @@
+{
+  "run_id": "d4ccd2fd5025",
+  "lab": "L07_ray_systems",
+  "name": "ray_serve_bench",
+  "created_at": "2026-10-28T17:15:12+00:00",
+  "config": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fake": true,
+    "fake_ms": 50,
+    "proxy": null,
+    "replicas": [
+      1,
+      2
+    ],
+    "batch_wait_ms": [
+      0,
+      10
+    ],
+    "max_batch": 8,
+    "concurrency": [
+      1,
+      4,
+      16
+    ],
+    "n_requests": 128,
+    "max_new_tokens": 32,
+    "max_ongoing": 16,
+    "gpu_frac": 0.2,
+    "port": 8002,
+    "smoke": false
+  },
+  "config_hash": "07733b9c7062",
+  "hardware": {
+    "hostname": "kirc",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900KS",
+    "cpu_cores": 24,
+    "ram_gib": 109.9,
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA RTX A6000",
+        "memory_total_gib": 48.0,
+        "driver_version": "580.95.05",
+        "pci_bus_id": "00000000:01:00.0",
+        "compute_capability": "8.6"
+      },
+      {
+        "index": 1,
+        "name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "memory_total_gib": 95.6,
+        "driver_version": "580.95.05",
+        "pci_bus_id": "00000000:05:00.0",
+        "compute_capability": "12.0"
+      }
+    ],
+    "gpu_topology": {
+      "links": {
+        "GPU0-GPU1": "PHB",
+        "GPU1-GPU0": "PHB"
+      },
+      "has_nvlink": false
+    },
+    "num_nodes": 1
+  },
+  "software": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "cuda_driver_api": "13.0",
+    "packages": {
+      "torch": "2.11.0",
+      "transformers": "5.7.0",
+      "vllm": "0.23.0",
+      "trl": "1.9.2",
+      "peft": "0.14.0",
+      "accelerate": "1.12.0",
+      "datasets": "4.8.4",
+      "bitsandbytes": "0.48.2",
+      "ray": "2.53.0",
+      "triton": "3.6.0",
+      "flashinfer-python": "0.6.12",
+      "xformers": "0.0.33.post1",
+      "sentence-transformers": "5.2.2",
+      "faiss-cpu": "1.14.3",
+      "numpy": "2.2.6"
+    },
+    "env": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "CUDA_DEVICE_ORDER": "PCI_BUS_ID"
+    },
+    "torch_cuda": "13.0",
+    "cudnn": 91900,
+    "ray_env": {
+      "ray": "2.53.0",
+      "cuda_visible_devices": "",
+      "cuda": false
+    }
+  },
+  "model": {
+    "id": null
+  },
+  "workload": {
+    "n_requests": 128,
+    "closed_loop": true
+  },
+  "execution": {},
+  "provenance": {
+    "commit": null,
+    "branch": null,
+    "dirty": null,
+    "command": "distributed/ray_serve/bench.py --fake",
+    "cwd": "/home/kirc/workspace/llm_system_zoo"
+  },
+  "status": "completed",
+  "finished_at": "2026-10-28T17:16:43+00:00",
+  "duration_s": 90.839,
+  "notes": []
+}

@@ -1,0 +1,120 @@
+{
+  "label": "pilot, shared GPU",
+  "gpu": "NVIDIA RTX A6000",
+  "inference_model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "n_params": 494032768,
+    "kv_kib_per_token": 12.0
+  },
+  "train_model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "n_params": 494032768
+  },
+  "inference": [],
+  "training": [
+    {
+      "mode": "amp",
+      "batch": 1,
+      "seq_len": 512,
+      "lora_rank": 16,
+      "param_dtype": "bf16",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.0813710689544678,
+      "estimate_total_gib_scores_materialised": 2.4094960689544678,
+      "estimate_components_gib": {
+        "weights": 0.9529836177825928,
+        "master_weights": 0.0,
+        "gradients": 0.03277587890625,
+        "optimizer_states": 0.0655517578125,
+        "activations": 0.595367431640625,
+        "logits": 0.4346923828125,
+        "total": 2.0813710689544678
+      },
+      "measured_peak_allocated_gib": 2.652179718017578,
+      "measured_peak_reserved_gib": 2.8671875,
+      "process_used_nvidia_smi_gib": 3.189453125,
+      "step_wall_s": 0.06155662052333355,
+      "tokens_per_s": 8317.545629489556,
+      "trainable_params": 8798208,
+      "status": "ok"
+    },
+    {
+      "mode": "amp",
+      "batch": 2,
+      "seq_len": 512,
+      "lora_rank": 16,
+      "param_dtype": "bf16",
+      "optim_foreach": null,
+      "estimate_total_gib": 3.1114308834075928,
+      "estimate_total_gib_scores_materialised": 3.7676808834075928,
+      "estimate_components_gib": {
+        "weights": 0.9529836177825928,
+        "master_weights": 0.0,
+        "gradients": 0.03277587890625,
+        "optimizer_states": 0.0655517578125,
+        "activations": 1.19073486328125,
+        "logits": 0.869384765625,
+        "total": 3.1114308834075928
+      },
+      "measured_peak_allocated_gib": 4.224693298339844,
+      "measured_peak_reserved_gib": 4.61328125,
+      "process_used_nvidia_smi_gib": 4.9375,
+      "step_wall_s": 0.13251869194209576,
+      "tokens_per_s": 7727.211799279141,
+      "trainable_params": 8798208,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 1,
+      "seq_len": 512,
+      "lora_rank": 16,
+      "param_dtype": "bf16",
+      "optim_foreach": null,
+      "estimate_total_gib": 1.5313184261322021,
+      "estimate_total_gib_scores_materialised": 1.5449903011322021,
+      "estimate_components_gib": {
+        "weights": 0.9529836177825928,
+        "master_weights": 0.0,
+        "gradients": 0.03277587890625,
+        "optimizer_states": 0.0655517578125,
+        "activations": 0.045314788818359375,
+        "logits": 0.4346923828125,
+        "total": 1.5313184261322021
+      },
+      "measured_peak_allocated_gib": 1.936147689819336,
+      "measured_peak_reserved_gib": 2.197265625,
+      "process_used_nvidia_smi_gib": 2.521484375,
+      "step_wall_s": 0.10309927351772785,
+      "tokens_per_s": 4966.087369296176,
+      "trainable_params": 8798208,
+      "status": "ok"
+    },
+    {
+      "mode": "amp+ckpt",
+      "batch": 2,
+      "seq_len": 512,
+      "lora_rank": 16,
+      "param_dtype": "bf16",
+      "optim_foreach": null,
+      "estimate_total_gib": 2.0113255977630615,
+      "estimate_total_gib_scores_materialised": 2.0386693477630615,
+      "estimate_components_gib": {
+        "weights": 0.9529836177825928,
+        "master_weights": 0.0,
+        "gradients": 0.03277587890625,
+        "optimizer_states": 0.0655517578125,
+        "activations": 0.09062957763671875,
+        "logits": 0.869384765625,
+        "total": 2.0113255977630615
+      },
+      "measured_peak_allocated_gib": 2.8299522399902344,
+      "measured_peak_reserved_gib": 3.265625,
+      "process_used_nvidia_smi_gib": 3.58984375,
+      "step_wall_s": 0.11885783169418573,
+      "tokens_per_s": 8615.334685178275,
+      "trainable_params": 8798208,
+      "status": "ok"
+    }
+  ]
+}

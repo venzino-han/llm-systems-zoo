@@ -1,0 +1,15 @@
+{
+  "final_metrics_rank0": {
+    "epoch": 2,
+    "loss": 5.546178817749023,
+    "tokens_per_s_per_worker": 31787.031562780972,
+    "rank": 0,
+    "world": 2,
+    "param_digest": "216450e68317",
+    "params_identical_across_workers": true
+  },
+  "wall_s": 13.886014903895557,
+  "checkpoint": "/home/kirc/workspace/llm_system_zoo/runs/L07_ray_systems/20261029_022311_ray_train_ebbf8ff5c9fe/ray_results/l07_ray_train/checkpoint_2026-10-29_02-23-23.073570",
+  "workers": 2,
+  "use_gpu": false
+}

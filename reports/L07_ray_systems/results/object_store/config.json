@@ -1,0 +1,11 @@
+{
+  "arg_mib": 100,
+  "k_tasks": 16,
+  "store_mib": 256,
+  "obj_mib": 50,
+  "n_objs": 12,
+  "bp_n": 120,
+  "bp_obj_mib": 10,
+  "bp_window": 8,
+  "smoke": false
+}

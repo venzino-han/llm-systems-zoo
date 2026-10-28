@@ -1,0 +1,89 @@
+{
+  "trace_id": "d73f6c833b28",
+  "spans": [
+    {
+      "span_id": "5a679f14",
+      "parent_id": null,
+      "name": "rag.request",
+      "kind": "other",
+      "t_start": 5149425.364696034,
+      "t_end": 5149425.417498161,
+      "attributes": {
+        "question": "What is the national currency of Liechtenstein?"
+      },
+      "duration_s": 0.05280212685465813
+    },
+    {
+      "span_id": "898ee482",
+      "parent_id": "5a679f14",
+      "name": "retrieve",
+      "kind": "retrieval",
+      "t_start": 5149425.364702635,
+      "t_end": 5149425.369178257,
+      "attributes": {
+        "k": 10,
+        "n": 10
+      },
+      "duration_s": 0.00447562150657177
+    },
+    {
+      "span_id": "fc06a688",
+      "parent_id": "5a679f14",
+      "name": "rerank",
+      "kind": "rerank",
+      "t_start": 5149425.369196418,
+      "t_end": 5149425.383047437,
+      "attributes": {
+        "top_n": 3
+      },
+      "duration_s": 0.01385101955384016
+    },
+    {
+      "span_id": "4b68191a",
+      "parent_id": "5a679f14",
+      "name": "generate",
+      "kind": "model",
+      "t_start": 5149425.383077651,
+      "t_end": 5149425.417496198,
+      "attributes": {
+        "prompt_tokens": 354,
+        "output_tokens": 4,
+        "gen_s": 0.03441189136356115
+      },
+      "duration_s": 0.034418546594679356
+    }
+  ],
+  "breakdown": {
+    "retrieval": {
+      "total_s": 0.00447562150657177,
+      "count": 1,
+      "share": 0.08476214450397536
+    },
+    "rerank": {
+      "total_s": 0.01385101955384016,
+      "count": 1,
+      "share": 0.2623193492179992
+    },
+    "model": {
+      "total_s": 0.034418546594679356,
+      "count": 1,
+      "share": 0.6518401557842363
+    },
+    "tool": {
+      "total_s": 0.0,
+      "count": 0,
+      "share": 0.0
+    },
+    "verify": {
+      "total_s": 0.0,
+      "count": 0,
+      "share": 0.0
+    },
+    "other": {
+      "total_s": 0.05280212685465813,
+      "count": 1,
+      "share": 1.0
+    },
+    "_wall_s": 0.05280212685465813
+  }
+}

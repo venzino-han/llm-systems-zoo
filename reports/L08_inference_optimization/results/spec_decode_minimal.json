@@ -1,0 +1,100 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "target": "Qwen/Qwen2.5-1.5B-Instruct",
+  "draft": "Qwen/Qwen2.5-0.5B-Instruct",
+  "baseline_target_only": {
+    "tokens": 768,
+    "wall_s": 8.074575709179044,
+    "ms_per_token": 10.513770454660213
+  },
+  "speculative": [
+    {
+      "k": 1,
+      "mode": "greedy",
+      "tokens": 768,
+      "wall_s": 10.004699977114797,
+      "ms_per_token": 13.026953095201558,
+      "speedup_vs_target_only": 0.8070782459893043,
+      "equal_to_target_greedy": 0.6666666666666666,
+      "target_forwards": 437,
+      "draft_forwards": 431,
+      "proposed": 431,
+      "accepted": 339,
+      "emitted": 768,
+      "acceptance_rate": 0.7865429234338747,
+      "tokens_per_target_forward": 1.757437070938215,
+      "acceptance_rate_per_position": [
+        0.7865429234338747
+      ]
+    },
+    {
+      "k": 2,
+      "mode": "greedy",
+      "tokens": 768,
+      "wall_s": 10.009569209069014,
+      "ms_per_token": 13.033293240975278,
+      "speedup_vs_target_only": 0.8066856365669764,
+      "equal_to_target_greedy": 0.8333333333333334,
+      "target_forwards": 334,
+      "draft_forwards": 653,
+      "proposed": 653,
+      "accepted": 442,
+      "emitted": 768,
+      "acceptance_rate": 0.6768759571209801,
+      "tokens_per_target_forward": 2.2994011976047903,
+      "acceptance_rate_per_position": [
+        0.7713414634146342,
+        0.75
+      ]
+    },
+    {
+      "k": 4,
+      "mode": "greedy",
+      "tokens": 768,
+      "wall_s": 11.41728357039392,
+      "ms_per_token": 14.866254648950417,
+      "speedup_vs_target_only": 0.7072238908138508,
+      "equal_to_target_greedy": 0.6666666666666666,
+      "target_forwards": 253,
+      "draft_forwards": 985,
+      "proposed": 985,
+      "accepted": 523,
+      "emitted": 768,
+      "acceptance_rate": 0.5309644670050762,
+      "tokens_per_target_forward": 3.035573122529644,
+      "acceptance_rate_per_position": [
+        0.7327935222672065,
+        0.7513812154696132,
+        0.8518518518518519,
+        0.7982456140350878
+      ]
+    },
+    {
+      "k": 8,
+      "mode": "greedy",
+      "tokens": 768,
+      "wall_s": 17.04213206563145,
+      "ms_per_token": 22.19027612712428,
+      "speedup_vs_target_only": 0.47380079429515104,
+      "equal_to_target_greedy": 0.3333333333333333,
+      "target_forwards": 210,
+      "draft_forwards": 1595,
+      "proposed": 1595,
+      "accepted": 568,
+      "emitted": 768,
+      "acceptance_rate": 0.3561128526645768,
+      "tokens_per_target_forward": 3.657142857142857,
+      "acceptance_rate_per_position": [
+        0.7254901960784313,
+        0.7123287671232876,
+        0.8349514563106796,
+        0.7906976744186046,
+        0.7941176470588235,
+        0.7735849056603774,
+        0.8780487804878049,
+        0.8611111111111112
+      ]
+    }
+  ],
+  "label": "pilot, shared GPU"
+}

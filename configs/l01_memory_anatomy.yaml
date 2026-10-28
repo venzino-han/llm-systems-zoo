@@ -1,0 +1,21 @@
+# L01 — memory & compute anatomy. Consumed by hand (the scripts take CLI flags); kept here so the
+# exact pilot grid is versioned next to the results it produced.
+lab: L01_memory_anatomy
+inference_model: Qwen/Qwen2.5-0.5B-Instruct
+inference_dtype: bf16
+prompt_lens: [256, 1024]
+batch_sizes: [1, 4]
+decode_steps: 64
+train_model: HuggingFaceTB/SmolLM2-135M-Instruct   # full fine-tuning step fits the shared-GPU budget (< 5 GiB)
+train_grid: ["1x256", "2x256", "1x512", "2x512"]
+train_modes: [fp32, amp, "amp+ckpt"]
+lora_model: Qwen/Qwen2.5-0.5B-Instruct               # LoRA step on the 0.5B model, bf16 base
+lora_rank: 16
+profile:
+  batch_sizes: [1, 8]
+  prompt_len: 1024
+  decode_steps: 64
+  repeats: 5
+gpu_budget:
+  device: 0            # RTX A6000, shared with other processes during the pilot
+  need_free_gib: 5

@@ -1,0 +1,62 @@
+Operator 0 FromItems: 1 tasks executed, 64 blocks produced in 0.04s
+* Remote wall time: 289.28us min, 864.72us max, 521.99us mean, 33.41ms total
+* Remote cpu time: 427.9us min, 1.11ms max, 719.74us mean, 46.06ms total
+* UDF time: 0us min, 0us max, 0.0us mean, 0us total
+* Peak heap memory usage (MiB): 0.0 min, 0.0 max, 0 mean
+* Output num rows per block: 1 min, 1 max, 1 mean, 64 total
+* Output size bytes per block: 32 min, 159 max, 65 mean, 4168 total
+* Output rows per task: 64 min, 64 max, 64 mean, 1 tasks used
+* Tasks per node: 1 min, 1 max, 1 mean; 1 nodes used
+* Operator throughput:
+	* Total input num rows: 0 rows
+	* Total output num rows: 64 rows
+	* Ray Data throughput: 1717.2283756957459 rows/s
+	* Estimated single task throughput: 1915.7353470638038 rows/s
+
+Operator 1 Map(preprocess): 64 tasks executed, 64 blocks produced in 3.25s
+* Remote wall time: 473.28us min, 1.79ms max, 634.71us mean, 40.62ms total
+* Remote cpu time: 516.55us min, 832.97us max, 671.02us mean, 42.95ms total
+* UDF time: 240.4us min, 525.02us max, 365.66us mean, 23.4ms total
+* Peak heap memory usage (MiB): 90.11 min, 92.23 max, 91 mean
+* Output num rows per block: 1 min, 1 max, 1 mean, 64 total
+* Output size bytes per block: 106 min, 360 max, 172 mean, 11024 total
+* Output rows per task: 1 min, 1 max, 1 mean, 64 tasks used
+* Tasks per node: 64 min, 64 max, 64 mean; 1 nodes used
+* Operator throughput:
+	* Total input num rows: 64 rows
+	* Total output num rows: 64 rows
+	* Ray Data throughput: 19.693686480247 rows/s
+	* Estimated single task throughput: 1575.5335913678994 rows/s
+
+Operator 2 MapBatches(Generator): 8 tasks executed, 8 blocks produced in 7.4s
+* Remote wall time: 780.45ms min, 1.17s max, 922.44ms mean, 7.38s total
+* Remote cpu time: 1.57s min, 2.35s max, 1.85s mean, 14.79s total
+* UDF time: 955.58ms min, 7.38s max, 4.25s mean, 33.97s total
+* Peak heap memory usage (MiB): 1143.0 min, 1171.7 max, 1160 mean
+* Output num rows per block: 8 min, 8 max, 8 mean, 64 total
+* Output size bytes per block: 662 min, 778 max, 724 mean, 5799 total
+* Output rows per task: 8 min, 8 max, 8 mean, 8 tasks used
+* Tasks per node: 8 min, 8 max, 8 mean; 1 nodes used
+* Operator throughput:
+	* Total input num rows: 64 rows
+	* Total output num rows: 64 rows
+	* Ray Data throughput: 8.654080992059656 rows/s
+	* Estimated single task throughput: 8.672682735082942 rows/s
+
+Operator 3 Write: 8 tasks executed, 8 blocks produced in 6.37s
+* Remote wall time: 2.02ms min, 12.32ms max, 3.91ms mean, 31.24ms total
+* Remote cpu time: 2.15ms min, 12.24ms max, 3.99ms mean, 31.96ms total
+* UDF time: 0us min, 0us max, 0.0us mean, 0us total
+* Peak heap memory usage (MiB): 91.37 min, 91.71 max, 91 mean
+* Output num rows per block: 1 min, 1 max, 1 mean, 8 total
+* Output size bytes per block: 168 min, 168 max, 168 mean, 1344 total
+* Output rows per task: 1 min, 1 max, 1 mean, 8 tasks used
+* Tasks per node: 8 min, 8 max, 8 mean; 1 nodes used
+* Operator throughput:
+	* Total input num rows: 64 rows
+	* Total output num rows: 8 rows
+	* Ray Data throughput: 1.2549561040288317 rows/s
+	* Estimated single task throughput: 256.07053029063184 rows/s
+
+Dataset throughput:
+	* Ray Data throughput: 0.6970328219372607 rows/s

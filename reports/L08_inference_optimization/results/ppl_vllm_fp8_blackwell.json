@@ -1,0 +1,60 @@
+{
+  "engine": "vllm",
+  "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+  "load": "fp8",
+  "weights_gib": 0.59,
+  "mem_after_load_gib": 1.6462459564208984,
+  "kv_cache_tokens": 87376.0,
+  "perplexity": {
+    "ppl": 16.45228155128324,
+    "nll_per_token": 2.800464163720603,
+    "scored_tokens": 65472,
+    "eval_s": 29.941565746441483,
+    "prefill_tokens_per_s": 2188.796690025767
+  },
+  "decode": [
+    {
+      "batch": 1,
+      "prompt_tokens": 44,
+      "output_tokens": 128,
+      "wall_s": 0.16746230330318213,
+      "output_tokens_per_s": 764.3511254485877,
+      "ms_per_step": 1.3082992445561104
+    },
+    {
+      "batch": 8,
+      "prompt_tokens": 671,
+      "output_tokens": 1024,
+      "wall_s": 0.1863765474408865,
+      "output_tokens_per_s": 5494.253510221207,
+      "ms_per_step": 1.4560667768819258
+    }
+  ],
+  "phases": {
+    "load": {
+      "total_s": 28.94800666347146,
+      "count": 1,
+      "mean_s": 28.94800666347146,
+      "share_of_wall": 0.4330673448890422
+    },
+    "perplexity": {
+      "total_s": 29.941565746441483,
+      "count": 1,
+      "mean_s": 29.941565746441483,
+      "share_of_wall": 0.44793116605138744
+    },
+    "_wall_s": 66.84412252530456,
+    "_unaccounted_s": 7.954550115391612
+  },
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "vllm_log": {
+    "model_weights_gib": 0.59,
+    "kv_cache_tokens": 87376.0,
+    "max_concurrency_tokens_per_request": 2048,
+    "max_concurrency_x": 42.66,
+    "cuda_graph_capture_s": 1.0,
+    "cuda_graph_memory_gib": 0.06
+  },
+  "status": "ok",
+  "run_dir": "runs/L08_inference_optimization/20261029_023711_ppl_vllm_fp8_Qwen2.5-0.5B-Instruct_bf2fe6a6e2d4"
+}

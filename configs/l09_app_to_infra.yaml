@@ -1,0 +1,21 @@
+# L09 Application-to-Infrastructure demo — default parameters.
+index:
+  embed_model: BAAI/bge-small-en-v1.5
+  dataset: rag-datasets/rag-mini-wikipedia   # text-corpus/passages (3200 passages)
+  out: applications/rag/data/index
+rag_eval:
+  n: 100
+  k: 10
+  top_n: 3
+  rerank: both              # off | on | both
+  generator: hf             # hf | endpoint (OpenAI-compatible, e.g. vLLM)
+  model: Qwen/Qwen2.5-0.5B-Instruct
+  max_new_tokens: 24
+agent_eval:
+  n_qa: 40
+  n_arith: 10
+  model: Qwen/Qwen2.5-0.5B-Instruct
+  max_steps: 3
+  max_new_tokens: 96
+  verify_modes: [off, flag, remove]
+  verify_threshold: 0.0     # bge-reranker logit; 0 ~ "more likely relevant than not"

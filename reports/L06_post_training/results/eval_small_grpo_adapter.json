@@ -1,0 +1,16 @@
+{
+  "accuracy": {
+    "mean": 0.07,
+    "ci_low": 0.029750000000000013,
+    "ci_high": 0.12,
+    "n": 100
+  },
+  "format_rate": 0.98,
+  "mean_completion_chars": 27.44,
+  "label": "eval_small_grpo_adapter",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "runs/L06_post_training/20261029_020844_grpo_small_G4_L128_hf_96305c48bb88/adapter",
+  "n": 100,
+  "wall_s": 20.831379309296608,
+  "run_dir": "runs/L06_post_training/20261029_020919_eval_small_grpo_adapter_c6c3acd19c75"
+}

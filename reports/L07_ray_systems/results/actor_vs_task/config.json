@@ -1,0 +1,14 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "n": 64,
+  "actors": 2,
+  "batch": 8,
+  "max_new_tokens": 32,
+  "gpu_frac": 0.25,
+  "modes": [
+    "task_per_call",
+    "actor_pool",
+    "actor_batched"
+  ],
+  "smoke": false
+}

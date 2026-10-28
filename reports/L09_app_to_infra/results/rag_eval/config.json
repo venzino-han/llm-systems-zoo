@@ -1,0 +1,13 @@
+{
+  "index_dir": "/home/kirc/workspace/llm_system_zoo/applications/rag/data/index",
+  "n": 100,
+  "k": 10,
+  "top_n": 3,
+  "rerank": "both",
+  "generator": "hf",
+  "endpoint": null,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": 24,
+  "device": null,
+  "smoke": false
+}

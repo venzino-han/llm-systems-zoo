@@ -1,0 +1,26 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "fake": true,
+  "fake_ms": 50,
+  "proxy": null,
+  "replicas": [
+    1,
+    2
+  ],
+  "batch_wait_ms": [
+    0,
+    10
+  ],
+  "max_batch": 8,
+  "concurrency": [
+    1,
+    4,
+    16
+  ],
+  "n_requests": 128,
+  "max_new_tokens": 32,
+  "max_ongoing": 16,
+  "gpu_frac": 0.2,
+  "port": 8002,
+  "smoke": false
+}

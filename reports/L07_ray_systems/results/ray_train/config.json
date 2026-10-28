@@ -1,0 +1,13 @@
+{
+  "vocab": 256,
+  "seq_len": 64,
+  "d_model": 128,
+  "n_layers": 2,
+  "n_samples": 2048,
+  "batch_size": 32,
+  "epochs": 3,
+  "lr": 0.001,
+  "seed": 0,
+  "workers": 2,
+  "use_gpu": false
+}

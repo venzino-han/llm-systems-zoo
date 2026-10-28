@@ -1,0 +1,82 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "rows": [
+    {
+      "engine": "hf",
+      "mode": "bf16",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.9202079772949219,
+      "ppl": 16.260848793856358,
+      "scored_tokens": 65472,
+      "prefill_tok_s": 68872.70006481626,
+      "decode_tok_s_b1": 119.66876529931842,
+      "ms_per_step_b1": 8.356399412150495,
+      "decode_tok_s_b8": 828.3584551273519,
+      "ms_per_step_b8": 9.657654787588399,
+      "kv_cache_tokens": null
+    },
+    {
+      "engine": "hf",
+      "mode": "fp16",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.9202079772949219,
+      "ppl": 16.237143814151132,
+      "scored_tokens": 65472,
+      "prefill_tok_s": 69441.8388870357,
+      "decode_tok_s_b1": 118.77664245624666,
+      "ms_per_step_b1": 8.419163728831336,
+      "decode_tok_s_b8": 769.6848804510645,
+      "ms_per_step_b8": 10.393864038633183,
+      "kv_cache_tokens": null
+    },
+    {
+      "engine": "hf",
+      "mode": "int8_bnb",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.5869560241699219,
+      "ppl": 16.26979181172744,
+      "scored_tokens": 65472,
+      "prefill_tok_s": 17820.005806180077,
+      "decode_tok_s_b1": 22.916583329817353,
+      "ms_per_step_b1": 43.636522321321536,
+      "decode_tok_s_b8": 159.68010502360377,
+      "ms_per_step_b8": 50.1001674492727,
+      "kv_cache_tokens": null
+    },
+    {
+      "engine": "hf",
+      "mode": "nf4_bnb",
+      "status": "ok",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+      "weights_gib": 0.4203300476074219,
+      "ppl": 17.92084201848979,
+      "scored_tokens": 65472,
+      "prefill_tok_s": 36806.635459894256,
+      "decode_tok_s_b1": 61.14364826588346,
+      "ms_per_step_b1": 16.354928571672644,
+      "decode_tok_s_b8": 341.8680965824911,
+      "ms_per_step_b8": 23.40083815943217,
+      "kv_cache_tokens": null
+    },
+    {
+      "engine": "hf",
+      "mode": "awq",
+      "status": "failed",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct-AWQ",
+      "error": "ImportError: Loading an AWQ quantized model requires gptqmodel. Please install it with `pip install gptqmodel`"
+    },
+    {
+      "engine": "hf",
+      "mode": "gptq",
+      "status": "failed",
+      "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct-GPTQ-Int4",
+      "error": "ImportError: Loading a GPTQ quantized model requires optimum (`pip install optimum`)"
+    }
+  ],
+  "label": "pilot, shared GPU",
+  "engine": "hf",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+}

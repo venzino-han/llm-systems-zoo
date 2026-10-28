@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "label": "no_rerank",
+      "n": 100,
+      "em": 0.57,
+      "em_ci95": [
+        0.48,
+        0.6602499999999998
+      ],
+      "f1": 0.632278011902084,
+      "recall_at_k": 0.51,
+      "recall_in_context": 0.44,
+      "prompt_tokens_mean": 409.3,
+      "latency_s": {
+        "wall": 0.04460090107284486,
+        "retrieval": 0.006394352773204446,
+        "rerank": 0.0,
+        "model": 0.038158518951386215
+      }
+    },
+    {
+      "label": "rerank",
+      "n": 100,
+      "em": 0.48,
+      "em_ci95": [
+        0.39,
+        0.58
+      ],
+      "f1": 0.5407097684923772,
+      "recall_at_k": 0.51,
+      "recall_in_context": 0.44,
+      "prompt_tokens_mean": 423.54,
+      "latency_s": {
+        "wall": 0.054893829664215445,
+        "retrieval": 0.004788321070373058,
+        "rerank": 0.015841792216524483,
+        "model": 0.034189773118123414
+      }
+    }
+  ],
+  "device": "cuda"
+}

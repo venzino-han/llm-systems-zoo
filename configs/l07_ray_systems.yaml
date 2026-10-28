@@ -1,0 +1,52 @@
+# L07 Ray Systems Lab — default parameters of each experiment (the scripts' CLI defaults).
+# Values here are the "measurement" grid; every script also has --smoke for a < 2 min check.
+task_overhead:
+  workers: 8
+  granularities_s: [1.0e-5, 1.0e-4, 1.0e-3, 1.0e-2, 1.0e-1, 1.0]
+  budget_s: 4.0          # sequential seconds per granularity (bounds the unit count)
+  max_units: 4000
+  chunk: 64
+  repeats: 2
+actor_vs_task:
+  model: HuggingFaceTB/SmolLM2-135M-Instruct   # tiny: an actor *pool* fits the shared-GPU budget
+  n: 64
+  actors: 2
+  batch: 8
+  max_new_tokens: 32
+  gpu_frac: 0.25
+object_store:
+  arg_mib: 100
+  k_tasks: 16
+  store_mib: 256
+  obj_mib: 50
+  n_objs: 12
+  backpressure: {n: 120, obj_mib: 10, window: 8}
+placement:
+  actors: 3
+  gpu_frac: 0.25
+  alloc_mib: 1024
+failure_injection:
+  n_items: 200
+  workers: 4
+  work_s: 0.01
+  crash_items: [7, 101]
+  flaky_items: [3, 50, 150]
+ray_data:
+  model: HuggingFaceTB/SmolLM2-135M-Instruct
+  source: rag_qa
+  limit: 256
+  max_new_tokens: 32
+  batch_sizes: [1, 8, 32]
+  concurrency: [1, 2]
+  slow_preprocess_ms: [0, 50]
+ray_train:
+  workers: 2
+  use_gpu: false
+  epochs: 3
+  n_samples: 2048
+ray_serve_bench:
+  model: HuggingFaceTB/SmolLM2-135M-Instruct
+  replicas: [1, 2]
+  batch_wait_ms: [0, 10]
+  concurrency: [1, 4, 16]
+  n_requests: 128

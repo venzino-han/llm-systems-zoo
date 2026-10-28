@@ -1,0 +1,11 @@
+{
+  "embed_model": "BAAI/bge-small-en-v1.5",
+  "dim": 384,
+  "n_passages": 3200,
+  "dataset": "rag-datasets/rag-mini-wikipedia",
+  "device": "cuda:0",
+  "load_s": 4.800833720713854,
+  "embed_s": 0.934058777987957,
+  "passages_per_s": 3425.90859955631,
+  "index_dir": "/home/kirc/workspace/llm_system_zoo/applications/rag/data/index"
+}

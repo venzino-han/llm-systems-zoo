@@ -1,0 +1,53 @@
+=== eval base ===
+[eval] eval_small_base: n=100 accuracy=0.300 (95% CI 0.210–0.390) format_rate=0.11 wall=22.7s
+run dir: runs/L06_post_training/20261029_020812_eval_small_base_3d03f73fa948
+=== grpo hf pilot ===
+0, 36840 MiB
+1, 95085 MiB
+[grpo] grpo_small_G4_L128_hf: reward 0.20500001013278962 → 0.2750000089406967 (first/last 5), wall 25.3s, peak alloc 8.27 GiB
+phase share: {'rollout': 0.813, 'reward': 0.001, 'score_other': 0.007, 'learner_forward_loss': 0.073, 'learner_backward': 0.096, 'optimizer': 0.001} unaccounted 0.009
+run dir: runs/L06_post_training/20261029_020844_grpo_small_G4_L128_hf_96305c48bb88
+=== eval adapter runs/L06_post_training/20261029_020844_grpo_small_G4_L128_hf_96305c48bb88/adapter ===
+[eval] eval_small_grpo_adapter: n=100 accuracy=0.070 (95% CI 0.030–0.120) format_rate=0.98 wall=20.8s
+run dir: runs/L06_post_training/20261029_020919_eval_small_grpo_adapter_c6c3acd19c75
+=== grpo vllm colocate attempt ===
+0, 36840 MiB
+1, 95167 MiB
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/trl/generation/vllm_generation.py", line 291, in __init__
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/trl/generation/vllm_generation.py", line 351, in _init_vllm
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 349, in __init__
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/llm_engine.py", line 170, in from_engine_args
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/llm_engine.py", line 104, in __init__
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 104, in make_client
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/core_client.py", line 286, in __init__
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 132, in __init__
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/engine/core.py", line 268, in _initialize_kv_caches
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/core/kv_cache_utils.py", line 2052, in get_kv_cache_configs
+[rank0]:   File "/home/kirc/.local/lib/python3.10/site-packages/vllm/v1/core/kv_cache_utils.py", line 720, in _check_enough_kv_cache_memory
+[rank0]:     raise ValueError(
+[rank0]: ValueError: No available memory for the cache blocks. Try increasing `gpu_memory_utilization` when initializing the engine (this flag also controls CPU memory reservation on the CPU backend, despite its name). See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.
+PILOT DONE
+=== dpo A/B: default ===
+0, 41778 MiB
+1, 95299 MiB
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 786, in convert_to_fp32
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 119, in recursively_apply
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 120, in <dictcomp>
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 127, in recursively_apply
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 778, in _convert_to_fp32
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 892.00 MiB. GPU 0 has a total capacity of 47.40 GiB of which 632.56 MiB is free. Process 3915383 has 4.48 GiB memory in use. Process 3917600 has 26.34 GiB memory in use. Process 875949 has 9.95 GiB memory in use. Including non-PyTorch memory, this process has 5.98 GiB memory in use. Of the allocated memory 5.52 GiB is allocated by PyTorch, and 145.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+=== dpo A/B: precompute-ref ===
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 786, in convert_to_fp32
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 119, in recursively_apply
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 120, in <dictcomp>
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 127, in recursively_apply
+  File "/home/kirc/.local/lib/python3.10/site-packages/accelerate/utils/operations.py", line 778, in _convert_to_fp32
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 892.00 MiB. GPU 0 has a total capacity of 47.40 GiB of which 632.56 MiB is free. Process 3915383 has 4.48 GiB memory in use. Process 3917600 has 26.34 GiB memory in use. Process 875949 has 9.95 GiB memory in use. Including non-PyTorch memory, this process has 5.98 GiB memory in use. Of the allocated memory 5.52 GiB is allocated by PyTorch, and 145.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+=== grpo vllm colocate attempt util 0.12 ===
+0, 41778 MiB
+1, 95299 MiB
+[rank0]: Traceback (most recent call last):
+[rank0]:     raise ValueError(
+[rank0]: ValueError: Free memory on device cuda:0 (0.18/47.4 GiB) on startup is less than desired GPU memory utilization (0.12, 5.69 GiB). Decrease GPU memory utilization or reduce GPU memory used by other processes.
+PILOT2 DONE

@@ -1,0 +1,12 @@
+# L08c kernels and L08d compilation pilots
+compile:
+  model: Qwen/Qwen2.5-0.5B-Instruct
+  hf_modes: [eager, default, reduce-overhead]   # max-autotune pending exclusive GPU
+  batch_sizes: [1, 8]
+  prompt_len: 64
+  new_tokens: 128
+  vllm: {enforce_eager: [true, false], batch_sizes: [1, 8], kv_cache_memory_bytes: 2147483648}
+kernels:
+  softmax: {rows: 2048, cols: [128, 512, 1024, 2048, 4096, 8192, 16384], dtype: float16}
+  rmsnorm: {rows: 4096, hidden: [896, 1536, 2048, 3584, 4096, 8192], dtype: bfloat16}
+  attention: {heads: 8, seq: [256, 512, 1024, 2048, 4096, 8192], head_dim: [64, 128], dtype: bfloat16}

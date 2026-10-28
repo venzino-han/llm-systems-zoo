@@ -1,0 +1,55 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "torch": "2.11.0+cu130",
+  "rows": [
+    {
+      "part": "vllm",
+      "mode": "enforce_eager",
+      "batch": 1,
+      "new_tokens": 128,
+      "steady_s": 0.6851053219288588,
+      "steady_ms_per_step": 5.352385327569209,
+      "steady_output_tokens_per_s": 186.83258749125804,
+      "engine_init_s": 8.820462882518768,
+      "cuda_graph_capture_s": null,
+      "cuda_graph_memory_gib": null
+    },
+    {
+      "part": "vllm",
+      "mode": "enforce_eager",
+      "batch": 8,
+      "new_tokens": 128,
+      "steady_s": 0.893103176727891,
+      "steady_ms_per_step": 6.977368568186648,
+      "steady_output_tokens_per_s": 1146.5640551763377,
+      "engine_init_s": 8.820462882518768,
+      "cuda_graph_capture_s": null,
+      "cuda_graph_memory_gib": null
+    },
+    {
+      "part": "vllm",
+      "mode": "cuda_graphs",
+      "batch": 1,
+      "new_tokens": 128,
+      "steady_s": 0.5734276901930571,
+      "steady_ms_per_step": 4.479903829633258,
+      "steady_output_tokens_per_s": 223.2190774688714,
+      "engine_init_s": 23.051743424497545,
+      "cuda_graph_capture_s": 2.0,
+      "cuda_graph_memory_gib": 0.16
+    },
+    {
+      "part": "vllm",
+      "mode": "cuda_graphs",
+      "batch": 8,
+      "new_tokens": 128,
+      "steady_s": 0.8438970614224672,
+      "steady_ms_per_step": 6.592945792363025,
+      "steady_output_tokens_per_s": 1213.4181368921377,
+      "engine_init_s": 23.051743424497545,
+      "cuda_graph_capture_s": 2.0,
+      "cuda_graph_memory_gib": 0.16
+    }
+  ],
+  "label": "pilot, shared GPU"
+}
