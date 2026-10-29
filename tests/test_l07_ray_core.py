@@ -6,18 +6,18 @@ import time
 
 import pytest
 
-from distributed.ray_core._common import busy_wait
-from distributed.ray_core.failure_injection import analyse, run_policy
-from distributed.ray_core.object_store import bounded_map
-from distributed.ray_core.placement import render_bundles
-from distributed.ray_core.task_overhead import (
+ray = pytest.importorskip("ray")
+
+from distributed.ray_core._common import busy_wait  # noqa: E402
+from distributed.ray_core.failure_injection import analyse, run_policy  # noqa: E402
+from distributed.ray_core.object_store import bounded_map  # noqa: E402
+from distributed.ray_core.placement import render_bundles  # noqa: E402
+from distributed.ray_core.task_overhead import (  # noqa: E402
     n_units_for,
     run_ray_chunked,
     run_ray_tasks,
     run_sequential,
 )
-
-ray = pytest.importorskip("ray")
 
 
 @pytest.fixture(scope="module")

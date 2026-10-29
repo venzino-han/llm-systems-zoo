@@ -18,7 +18,7 @@ Two acceptance rules are implemented:
   rejection sample from norm(max(0, p_i - q_i)). The resulting token distribution equals the
   target's (the rejection-sampling guarantee), checked in tests/test_l08_spec_decode.py.
 
-KV cache handling: both models keep a `DynamicCache`. After verification we call `cache.crop(n)`
+KV cache handling: both models keep a `DynamicCache`. After verification we call `cache.crop(-n)`
 to roll both caches back to the accepted length. Rolling back is exact (the cache entries for
 accepted tokens are unchanged) and cheaper than recomputation; the alternative of recomputing the
 prefix each step would hide the whole speed-up behind prefill cost.
@@ -88,6 +88,12 @@ class SpecStats:
             "acceptance_rate_per_position": self.acceptance_rate_per_position,
         }
 
+
+
+def _drop_tail(cache, n: int) -> None:
+    """Remove the last ``n`` positions from a DynamicCache (no-op for ``n == 0``)."""
+    if n > 0:
+        cache.crop(-n)
 
 def _new_cache():
     from transformers import DynamicCache
@@ -206,9 +212,11 @@ def speculative_generate(
         stats.emitted += len(new_tokens)
         # ---- 4. roll the caches back to the accepted prefix ------------------------------------
         # target saw last_token + k_eff proposals; keep last_token + the n_acc accepted ones.
-        t_cache.crop(t_cache.get_seq_length() - k_eff + n_acc)
+        # Negative crop ("drop the last n entries") is the form supported by every transformers
+        # release we test against; the positive "keep n" form was removed in 5.20.
+        _drop_tail(t_cache, k_eff - n_acc)
         # draft saw (pending) + last_token + proposals[:k_eff-1]; keep up to the accepted ones.
-        d_cache.crop(d_cache.get_seq_length() - (k_eff - 1) + min(n_acc, k_eff - 1))
+        _drop_tail(d_cache, (k_eff - 1) - min(n_acc, k_eff - 1))
         d_pending = [proposals[k_eff - 1]] if n_acc == k_eff else []
         last_token = generated[-1]
         if eos_token_id is not None and eos_token_id in new_tokens:

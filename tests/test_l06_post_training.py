@@ -7,8 +7,10 @@ import time
 
 import pytest
 
-from llm_systems_zoo import PhaseTimer
-from post_training.common import bootstrap_ci
+pytest.importorskip("transformers")
+
+from llm_systems_zoo import PhaseTimer  # noqa: E402
+from post_training.common import bootstrap_ci  # noqa: E402
 from post_training.rewards import (
     correctness_reward,
     extract_answer,
@@ -18,7 +20,7 @@ from post_training.rewards import (
     length_penalty,
     normalise_number,
 )
-from post_training.timing_callback import PhaseTimingCallback, instrument_trainer, phase_breakdown
+from post_training.timing_callback import PhaseTimingCallback, instrument_trainer, phase_breakdown  # noqa: E402
 
 
 # ---- rewards --------------------------------------------------------------------------------

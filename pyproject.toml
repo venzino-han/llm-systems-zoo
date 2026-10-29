@@ -34,7 +34,7 @@ inference = ["torch>=2.4", "transformers>=4.45", "vllm>=0.6", "bitsandbytes>=0.4
 training = ["torch>=2.4", "transformers>=4.45", "datasets>=2.20", "accelerate>=0.34", "peft>=0.12", "trl>=0.12"]
 ray = ["ray[default,data,train,serve]>=2.30", "torch>=2.4", "transformers>=4.45"]
 apps = ["torch>=2.4", "transformers>=4.45", "sentence-transformers>=3.0", "faiss-cpu>=1.8", "datasets>=2.20", "openai>=1.40"]
-dev = ["pytest>=8.0", "pytest-timeout>=2.3", "ruff>=0.6"]
+dev = ["pytest>=8.0", "pytest-timeout>=2.3", "ruff>=0.6", "httpx>=0.27", "aiohttp>=3.9"]
 
 [project.urls]
 Homepage = "https://github.com/venzino-han/llm-systems-zoo"
